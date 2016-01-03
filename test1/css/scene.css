@@ -1,0 +1,14 @@
+#sec01{
+	width: 100vw;
+	background-image: url('../img/wood1.jpg');
+}
+#sec02{
+	width: 100vw;
+	left: 100vw;
+	background-image: url('../img/bricks.jpg');
+}
+#sec03{
+	width: 100vw;
+	left: 200vw;
+	background-color: red;
+}

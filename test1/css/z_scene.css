@@ -1,0 +1,142 @@
+#parallaxContainer {
+	width: 10000px;
+	height: 100%;
+	top: 0px;
+	position: relative;
+}
+#parallaxContainer .layer1 {
+	background-image: url("../img/forestc.png");
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+
+}
+#parallaxContainer .layer2 {
+	background-image: url("../img/forestb.png");
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+}
+#parallaxContainer .layer3 {
+	background-image: url("../img/forestas.png");
+	background-position: bottom;
+	background-repeat: repeat-x;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+#casa{
+	position: absolute;
+	top: 40%;
+	left:3500px;
+	z-index: 20;
+}
+#pop1{
+	position: absolute;
+	top: 400px;
+	left: 4500px;
+	opacity: 0;
+	z-index: 22;
+}
+.bocadillo{
+	width: 250px;
+	height: 60px;
+	border-radius: 50px;
+	background-color: rgba(230,230,230,.8);
+	padding: 20px;
+	border: black solid 3px;
+	text-align: center;
+	font-family: Arial;
+	font-size: 30px;
+}
+
+#muneco{
+	position: absolute;
+	top: 50%;
+	left:2000px;
+}
+#coche{
+	position: absolute;
+	bottom: 10%;
+	left:8500px;
+}
+#plane{
+	position: absolute;
+	bottom: 30%;
+	left:8000px;
+	overflow: hidden;
+}
+
+
+/*Saludo*/
+.box_saludo{
+	position: absolute;
+	left:2300px;
+	width: 700px;
+	height: 70px;
+	/*border: red solid 1px; /*Activa para ver fundionamiento del saludo*/
+	top: 40%;
+	overflow: hidden;
+}
+#saludo{
+	position: relative;
+	left: -340px;
+	width: 340px;
+	height: 100px;
+
+}
+.texto_saludo {
+	position: relative;
+	background-color: rgba(200,200,200,.7);
+	border: black solid 3px;
+	text-align: center;
+	font-family: Georgia;
+	font-size:30px;
+	padding: 20px;
+	border-radius: 20px;
+}
+/*Conejo*/
+#imagesequence{
+	position: absolute;
+	bottom: 10%;
+	left:3550px;
+	z-index: 19;
+}
+
+
+#parallaxText {
+	width: 0;
+	height: 100%;
+	margin: auto;
+	position: relative;
+}
+
+#parallaxText .layer1, #parallaxText .layer2, #parallaxText .layer3 {
+	position: absolute;
+	font-size: 50px;
+	line-height: 50px;
+	margin-left: -150px;
+	margin-top: -25px;
+	width: 300px;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	color: #133f71;
+}
+#parallaxText .layer1 {
+	top: 48%;
+}
+#parallaxText .layer2 {
+	top: 49%;
+}
+#parallaxText .layer3 a {
+	display: block;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+#parallax1 > div, #parallax2 > div, #parallax3 > div {
+	-webkit-transform: translateZ(0);-webkit-backface-visibility: hidden;-webkit-perspective: 1000;
+}
