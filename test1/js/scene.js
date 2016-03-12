@@ -5,18 +5,16 @@ $(window).load(function () { // wait for document ready
     $(".back_home").click(function(){
  		//$(".svg1").fadeToggle(2000);      
        	$('html, body').animate({scrollLeft: $("#sec01").offset().left}, 2000);
+       	$(".ok, .wrong, .pregunta, .respuesta").hide();
     });
 
     $(".start").click(function(){
-    	$("#p1").slideDown(1000);
-     	$("#p1r1").slideDown(2000);   	
-     	$("#p1r2").slideDown(3000); 
-     	$("#p1r3").slideDown(4000);      	
+    	$("#p1, #p1r1, #p1r2, #p1r3").slideDown(1000);
     });
 
 
 
-//pregunta 1 respuesta 1 OK
+//pregunta 1 respuesta 1 OK - sevilla
     $("#p1r1").click(function(){
     	$('html, body').stop().animate({scrollLeft: $(window).width()}, 3000, "swing");
         $("#m1ok").delay(2000).slideDown(1000);
@@ -26,37 +24,39 @@ $(window).load(function () { // wait for document ready
      	$("#p2r3").delay(3000).slideDown(4000);                 
     });
 
-//pregunta 1 respuesta 2 WRONG
+//pregunta 1 respuesta 2 WRONG - madrid
     $("#p1r2").click(function(){
     	$('html, body').stop().animate({scrollLeft: $(window).width()}, 3000, "swing");
         $("#m1wrong").delay(2000).slideDown(1000);
-        //$(".back_home").delay(4000).fadeToggle(1000);
     });
-//pregunta 1 respuesta 3 WRONG
+//pregunta 1 respuesta 3 WRONG - zaragoza
     $("#p1r3").click(function(){
     	$('html, body').stop().animate({scrollLeft: $(window).width()}, 3000, "swing");
         $("#m1wrong").delay(2000).slideDown(1000);
-        //$(".back_home").delay(4000).fadeToggle(1000);
     });
 
 
-//pregunta 2 respuesta 1 WRONG
-    $("#p2r1").click(function(){
+//pregunta 2 respuesta 1 WRONG - 1468
+    $("#p2r1").click(function(){ 
     	$('html, body').stop().animate({scrollLeft: '+='+$(window).width()}, 3000, "swing");
-        $("#m1wrong").delay(2000).slideDown(1000);
+        $("#m2wrong").delay(2000).slideDown(1000);
         //$(".back_home").delay(4000).fadeToggle(1000);       
     });
 
-//pregunta 2 respuesta 2 OK
+//pregunta 2 respuesta 2 OK - 1971
     $("#p2r2").click(function(){
     	$('html, body').stop().animate({scrollLeft: '+='+$(window).width()}, 3000, "swing");
-        $("#m1ok").delay(2000).slideDown(1000);
-        $("#p3").delay(3000).slideDown(1000);      
+        $("#m2ok").delay(2000).slideDown(1000);
+        $("#p3").delay(3000).slideDown(1000);
+     	$("#p3r1").delay(3000).slideDown(2000);   	
+     	$("#p3r2").delay(3000).slideDown(3000); 
+     	$("#p3r3").delay(3000).slideDown(4000);          
+
     });
-//pregunta 2 respuesta 3 WRONG
+//pregunta 2 respuesta 3 WRONG - 2002
     $("#p2r3").click(function(){
     	$('html, body').stop().animate({scrollLeft: '+='+$(window).width()}, 3000, "swing");
-        $("#m1wrong").delay(2000).slideDown(1000);
+        $("#m2wrong").delay(2000).slideDown(1000);
         //$(".back_home").delay(4000).fadeToggle(1000);
     });
 

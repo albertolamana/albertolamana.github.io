@@ -1,3 +1,8 @@
+#wrapper{
+
+	background-image: url('../img/wood1.jpg');
+}
+
 .back_home{
 	position: fixed;
 	border: black solid 1px;
@@ -21,7 +26,6 @@
 	z-index: 99;
 	display: block;
 }
-
 .pregunta{
 	position: absolute;
 	top:40%;
@@ -35,24 +39,9 @@
 	display: none;
 }
 
-.ok{
-	font-size: 50px;
-	position: absolute;
-	display: none;
-	color:green;
-	left: 10%;
-}
-.wrong{
-	font-size: 50px;
-	position: absolute;
-	display: none;
-	color:red;
-	left: 10%;	
-}
-
 #sec01{
 	width: 100vw;
-	background-image: url('../img/wood1.jpg');
+	/*background-image: url('../img/wood1.jpg');*/
 }
 
 #p1{
@@ -79,8 +68,23 @@
 #sec02{
 	width: 100vw;
 	left: 100vw;
-	background-image: url('../img/bricks.jpg');
+	/*background-image: url('../img/bricks.jpg');*/
 }
+#m1ok{
+	font-size: 50px;
+	position: absolute;
+	display: none;
+	color:green;
+	left: 10%;
+}
+#m1wrong{
+	font-size: 50px;
+	position: absolute;
+	display: none;
+	color:red;
+	left: 10%;	
+}
+
 #p2{
 	display: none;
 }
@@ -99,7 +103,24 @@
 #sec03{
 	width: 100vw;
 	left: 200vw;
-	background-color: blue;
+	/*background-color: yellow;*/
+}
+
+#m2ok{
+	font-size: 50px;
+	position: absolute;
+	display: none;
+	color:green;
+	left: 10%;	
+	top:50%;
+}
+#m2wrong{
+	font-size: 50px;
+	position: absolute;
+	display: none;
+	color:red;
+	left: 10%;	
+	top:50%;
 }
 
 #p3r1{
