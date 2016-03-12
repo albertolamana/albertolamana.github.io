@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=500" />
+	<meta name="keywords" content="ScrollMagic, example, scrolling, attaching, scrollbar, parallax" />
+	<meta name="author"	content="Jan Paepke (www.janpaepke.de)" />
+	<title>Parallax Scrolling - Examples - ScrollMagic</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/examples.css" type="text/css">
+	<link rel="stylesheet" href="css/scene.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">	
+
+	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/highlight.pack.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.min.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
+	
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic.js"></script>
+	<script type="text/javascript" src="js/animation.gsap.js"></script>
+	<script type="text/javascript" src="js/debug.addIndicators.js"></script>
+
+	<script type="text/javascript" src="js/tracking.js"></script>
+	<script type='text/javascript' src='js/jquery.mousewheel.min.js'></script>
+
+	<script type="text/javascript" src="js/scene.js"></script>
+
+</head>
+
+<body>
+<form class="move">
+	<fieldset>
+		<legend>Anchor Links</legend>
+		<p><a href="#top">Top</a></p>
+		<p><a href="#middle">Middle</a></p>
+		<p><a href="#bottom">Bottom</a></p>
+	</fieldset>
+	<div id="coordinates"></div>
+</form>
+
+<div id="content-wrapper">
+ <div id="example-wrapper" class="horizontal">
+  <div class="scrollContent">
+	<section id="titlechart">
+		<div id="description">
+			<h1>Parallax Scrolling</h1>
+			<h2>No big deal, if you have ScrollMagic.</h2>
+		</div>
+
+		<div id="draggable" class="ui-widget-content">
+		  <p>Drag me around</p>
+		  <ul>
+        	<li id="posX"></li>
+        	<li id="posY"></li>
+    	  </ul>
+		</div>
+
+	</section>
+
+				<div class="spacer s0"></div>
+
+	<section class="demo fullwidth">
+		<div id="parallaxContainer">
+			<div class="layer1"></div>
+			<div class="layer2"></div>
+			<div class="layer3"></div>
+		</div>
+
+		<div id="casa">
+			<img src="img/casa.png" style="width:500px;">
+		</div>
+
+		<div id="pop1">
+			<div class="bocadillo">Soy Gustavo <br>y esta es mi casa</div>
+		</div>
+
+		<a id="top"></a>
+
+	    <div id="muneco">
+			<img src="img/gente1.png">
+		</div>
+
+	    <div id="coche">
+			<img src="img/car_orange.png" style="width:150px;">
+	    </div>
+
+	    <div class="box_saludo">
+		    <div id="saludo">
+				<div class="texto_saludo">Hola, Buenos Días</div>
+		    </div>
+	    </div>
+
+	    <div id="plane">
+			<img src="img/plane.png" style="width:10px;">
+	    </div>
+
+		<div id="imagesequence">
+			<img id="conejo" style="height:200px;">
+		</div>
+
+		<div id="writing">
+		<!-- si el svg proviene de inkscape ajustar la propiedad translate para ajustarlo -->
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="650" height="150" style="border:red solid 1px;">
+				<path id="word" style="" transform="translate(-88.017 -112.86)"
+				  fill="#ff0000" stroke="#000000" stroke-width="1px" 
+				  d="m88.021 135.54 490.73 3.8947m94.545-2.2015-93.979 28.574-0.55615-52.306z"/>
+			</svg>
+		</div>
+
+		<!-- Graph -->
+		<div id="graph">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	     		width="600px" height="205.061px" viewBox="0 0 600 205.061" style="enable-background:new 0 0 600 205.061;" xml:space="preserve">
+			<style type="text/css">
+	    		.rule{stroke:#D3D3D3;stroke-miterlimit:10;}
+	    		.boxg{fill:#88ce02;}
+			</style>
+				<line class="rule" x1="181.223" y1="0" x2="181.223" y2="205.061"/>
+				<rect x="18.24" y="11.245" class="boxg" width="163.319" height="38.865"/>
+				<rect x="53.611" y="58.843" class="boxg" width="127.948" height="38.865"/>
+				<rect x="105.14" y="107.314" class="boxg" width="76.419" height="38.865"/>
+				<rect x="142.694" y="154.773" class="boxg" width="38.865" height="38.865"/>
+			</svg>
+			<button id="play" class="dark-grey-button club-demo-button">play</button>
+		</div>
+
+	    <div id="flecha">
+			<div id="flecha_in">
+				<img src="img/flecha.png">
+			</div>
+	    </div>
+
+
+	</section>
+
+	<section class="demo">
+		<div class="spacer s2"></div>
+		<div id="trigger1" class="spacer s0"></div>
+		<div id="animate1" class="box2 skin">
+			<p>You wouldn't like me, when I'm angry!</p>
+		</div>
+		<div class="spacer s2"></div>
+	</section>
+
+	<section class="demo">
+		<div class="spacer s2"></div>
+		<div id="trigger2" class="spacer s0"></div>
+		<div id="pin1" class="box2 blue">
+			<p>Stay where you are (at least for a while).</p>
+		</div>
+		<div class="spacer s2"></div>
+	</section>
+
+		<a id="middle"></a>
+		<div class="spacer s4"></div>
+		<div class="spacer s0"></div>
+
+	<section class="demo fullwidth" id="trigger2">
+		<div id="parallaxText">
+			<h1 class="layer1">PARALLAX</h1>
+			<h1 class="layer2">PARALLAX</h1>
+			<h1 class="layer3">PARALLAX</h1>
+		</div>
+	</section>
+
+	<div class="spacer s_viewport"></div>
+	<a id="bottom"></a>
+
+  </div>
+ </div>
+</div>
+</body>
+</html>
