@@ -1,14 +1,113 @@
+.back_home{
+	position: fixed;
+	border: black solid 1px;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: white;
+	top:100px;
+	left: 20px;
+	z-index: 99;
+	display: block;
+}
+
+.start{
+	position: absolute;
+	border: black solid 1px;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: white;
+	top:30%;
+	left: 45%;
+	z-index: 99;
+	display: block;
+}
+
+.pregunta{
+	position: absolute;
+	top:40%;
+	left: 30%;
+	font-size: 40px;
+}
+.respuesta{
+	font-size: 50px;
+	position: absolute;
+	right: 10%;
+	display: none;
+}
+
+.ok{
+	font-size: 50px;
+	position: absolute;
+	display: none;
+	color:green;
+	left: 10%;
+}
+.wrong{
+	font-size: 50px;
+	position: absolute;
+	display: none;
+	color:red;
+	left: 10%;	
+}
+
 #sec01{
 	width: 100vw;
 	background-image: url('../img/wood1.jpg');
 }
+
+#p1{
+	display: none;
+}
+
+#p1r1{
+	top: 20%;
+}
+#p1r2{
+	top: 50%;
+}
+#p1r3{
+	top: 80%;
+}
+
+#m1ok{
+	top: 40%;
+}
+#m1wrong{
+	top: 40%;
+}
+
 #sec02{
 	width: 100vw;
 	left: 100vw;
 	background-image: url('../img/bricks.jpg');
 }
+#p2{
+	display: none;
+}
+#p2r1{
+	top: 20%;
+}
+#p2r2{
+	top: 50%;
+}
+#p2r3{
+	top: 80%;
+}
+
+
+
 #sec03{
 	width: 100vw;
 	left: 200vw;
-	background-color: red;
+	background-color: blue;
+}
+
+#p3r1{
+	top: 20%;
+}
+#p3r2{
+	top: 50%;
+}
+#p3r3{
+	top: 80%;
 }

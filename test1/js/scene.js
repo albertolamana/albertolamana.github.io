@@ -2,6 +2,67 @@ var controller = new ScrollMagic.Controller({vertical: false});
 
 $(window).load(function () { // wait for document ready
 
+    $(".back_home").click(function(){
+ 		//$(".svg1").fadeToggle(2000);      
+       	$('html, body').animate({scrollLeft: $("#sec01").offset().left}, 2000);
+    });
+
+    $(".start").click(function(){
+    	$("#p1").slideDown(1000);
+     	$("#p1r1").slideDown(2000);   	
+     	$("#p1r2").slideDown(3000); 
+     	$("#p1r3").slideDown(4000);      	
+    });
+
+
+
+//pregunta 1 respuesta 1 OK
+    $("#p1r1").click(function(){
+    	$('html, body').stop().animate({scrollLeft: $(window).width()}, 3000, "swing");
+        $("#m1ok").delay(2000).slideDown(1000);
+        $("#p2").delay(3000).slideDown(1000);  
+     	$("#p2r1").delay(3000).slideDown(2000);   	
+     	$("#p2r2").delay(3000).slideDown(3000); 
+     	$("#p2r3").delay(3000).slideDown(4000);                 
+    });
+
+//pregunta 1 respuesta 2 WRONG
+    $("#p1r2").click(function(){
+    	$('html, body').stop().animate({scrollLeft: $(window).width()}, 3000, "swing");
+        $("#m1wrong").delay(2000).slideDown(1000);
+        //$(".back_home").delay(4000).fadeToggle(1000);
+    });
+//pregunta 1 respuesta 3 WRONG
+    $("#p1r3").click(function(){
+    	$('html, body').stop().animate({scrollLeft: $(window).width()}, 3000, "swing");
+        $("#m1wrong").delay(2000).slideDown(1000);
+        //$(".back_home").delay(4000).fadeToggle(1000);
+    });
+
+
+//pregunta 2 respuesta 1 WRONG
+    $("#p2r1").click(function(){
+    	$('html, body').stop().animate({scrollLeft: '+='+$(window).width()}, 3000, "swing");
+        $("#m1wrong").delay(2000).slideDown(1000);
+        //$(".back_home").delay(4000).fadeToggle(1000);       
+    });
+
+//pregunta 2 respuesta 2 OK
+    $("#p2r2").click(function(){
+    	$('html, body').stop().animate({scrollLeft: '+='+$(window).width()}, 3000, "swing");
+        $("#m1ok").delay(2000).slideDown(1000);
+        $("#p3").delay(3000).slideDown(1000);      
+    });
+//pregunta 2 respuesta 3 WRONG
+    $("#p2r3").click(function(){
+    	$('html, body').stop().animate({scrollLeft: '+='+$(window).width()}, 3000, "swing");
+        $("#m1wrong").delay(2000).slideDown(1000);
+        //$(".back_home").delay(4000).fadeToggle(1000);
+    });
+
+
+
+
 // Main Parallax
 /*var tween1 = new TimelineMax ()
 	.add([
@@ -188,54 +249,56 @@ var sections = $('.panelSection');
 console.log(sections);
 var i =0;
 
-function next(){
-    if(i == 0){
-        $('.prev-section').show();
-    }
-    if(i < sections.length -1){
-        i++;
-        if(i == sections.length -1){
-             $('.next-section').hide();   
-        }
-        //$(document).scrollLeft($(sections[i]).offset().left );
-       	$('html, body').stop().animate({scrollLeft: $(sections[i]).offset().left}, 1000);
-	}
-}	
-function prev(){
-    if(i == sections.length -1){
-        $('.next-section').show();
-    }
-    if(i > 0){
-        i--;
-        if(i == 0){
-            $('.prev-section').hide();
-        }
-       	$('html, body').stop().animate({scrollLeft: $(sections[i]).offset().left}, 1000);
-    }    
-}
-$('html').keydown(function(e){
-    if(e.which == '38'){ //flecha arriba
-        prev();    
-    }
-   if(e.which == '40'){ //flecha abajo
-        next();    
-    }
-});
-$('.next-section').click(function(e){
-   e.preventDefault();
-   next();
-});
+// function next(){
+//     if(i == 0){
+//         $('.prev-section').show();
+//     }
+//     if(i < sections.length -1){
+//         i++;
+//         if(i == sections.length -1){
+//              $('.next-section').hide();   
+//         }
+//         //$(document).scrollLeft($(sections[i]).offset().left );
+//        	$('html, body').stop().animate({scrollLeft: $(sections[i]).offset().left}, 1000);
+// 	}
+// }	
+// function prev(){
+//     if(i == sections.length -1){
+//         $('.next-section').show();
+//     }
+//     if(i > 0){
+//         i--;
+//         if(i == 0){
+//             $('.prev-section').hide();
+//         }
+//        	$('html, body').stop().animate({scrollLeft: $(sections[i]).offset().left}, 1000);
+//     }    
+// }
 
-$('.prev-section').click(function(e){
-   e.preventDefault();
-   prev();
-});    
+// $('html').keydown(function(e){
+//     if(e.which == '38'){ //flecha arriba
+//         prev();    
+//     }
+//    if(e.which == '40'){ //flecha abajo
+//         next();    
+//     }
+// });
+
+// $('.next-section').click(function(e){
+//    e.preventDefault();
+//    next();
+// });
+
+// $('.prev-section').click(function(e){
+//    e.preventDefault();
+//    prev();
+// });    
 
 //mouse wheel scrolls horizontal
-$("html, body").mousewheel(function(event, delta) {
-    this.scrollLeft -= (delta * 30);
-    event.preventDefault();
-    });
+//$("html, body").mousewheel(function(event, delta) {
+//    this.scrollLeft -= (delta * 30);
+//    event.preventDefault();
+//    });
 
 //smooth scroll
 $('.secjump a').bind('click',function(event){
@@ -247,13 +310,22 @@ $('.secjump a').bind('click',function(event){
     });
 
 //show coordinates
-function show() {
-    //var posY = $(window).scrollTop();
-    var posX = $(window).scrollLeft() + $(window).width()/2; 
-    $("#coor").html("Left: " + posX + " px");
+// function show() {
+//     //var posY = $(window).scrollTop();
+//     var posX = $(window).scrollLeft() + $(window).width()/2; 
+//     $("#coor").html("Left: " + posX + " px");
     
-}
-show();
-$(window).scroll(show);
+// }
+// show();
+// $(window).scroll(show);
+
+window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
+
+
 
 });
