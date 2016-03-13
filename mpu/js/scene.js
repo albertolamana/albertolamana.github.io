@@ -33,7 +33,101 @@ $('#draggable').draggable(
         }
     });
 
+//primer hombre andando
+var imgwalk = [
+	"img/walk23.png",
+	"img/walk22.png",
+	"img/walk21.png",
+	"img/walk20.png",
+	"img/walk19.png",
+	"img/walk18.png",
+	"img/walk17.png",
+	"img/walk16.png",
+	"img/walk15.png",
+	"img/walk14.png",
+	"img/walk13.png",
+	"img/walk12.png",
+	"img/walk11.png",
+	"img/walk10.png",
+	"img/walk9.png",
+	"img/walk8.png",
+	"img/walk7.png",
+	"img/walk6.png",
+	"img/walk5.png",
+	"img/walk4.png",
+	"img/walk3.png",	
+	"img/walk2.png",
+	"img/walk1.png"	
+	];
+	// TweenMax can tween any property of any object. We use this object to cycle through the array
+	// create tween
+	var obj = {curImg: 0};
+	var manwalk = TweenMax.to(obj, 0.2, 
+		{
+		curImg: imgwalk.length - 1,	// animate propery curImg to number of images
+		roundProps: "curImg",				// only integers so it can be used as an array index
+		repeat: 10,									// repeat 3 times
+		immediateRender: true,			// load first image automatically
+		ease: Linear.easeNone,			// show every image the same ammount of time
+		onUpdate: function () {
+		  $("#manwalk").attr("src", imgwalk[obj.curImg]); // set the image source
+			}
+		}
+	);
+	// build scene
+	var scene_manwalk = new ScrollMagic.Scene({triggerElement: "#walksequence", offset: 0, duration: 8000})
+		.setTween(manwalk)
+		.setPin("#walksequence")
+		.addIndicators({name: "manwalk"}) // add indicators (requires plugin)
+		.addTo(controller);
 
+//conejo, hombre andando
+ var images = [
+ 	"img/man1.png",
+ 	"img/man2.png",
+ 	"img/man3.png",
+ 	"img/man4.png",
+ 	"img/man5.png"
+ 	];
+// 	// TweenMax can tween any property of any object. We use this object to cycle through the array
+// 	// create tween
+ 	var obj2 = {curImg: 0};
+ 	var conejo = TweenMax.to(obj2, 0.2, 
+ 		{
+ 		curImg: images.length - 1,	// animate propery curImg to number of images
+ 		roundProps: "curImg",				// only integers so it can be used as an array index
+ 		repeat: 20,									// repeat 3 times
+ 		immediateRender: true,			// load first image automatically
+ 		ease: Linear.easeNone,			// show every image the same ammount of time
+ 		onUpdate: function () {
+ 		  $("#conejo").attr("src", images[obj2.curImg]); // set the image source
+ 			}
+ 		}
+ 	);
+// 	// build scene
+ 	var scene_conejo = new ScrollMagic.Scene({triggerElement: "#imagesequence", offset:-200, duration: 8000})
+ 		.setTween(conejo)
+ 		.setPin("#imagesequence")
+ 		.addIndicators({name: "conejo"}) // add indicators (requires plugin)
+ 		.addTo(controller);
+
+//mensaje 1
+var scene_mg1a = new ScrollMagic.Scene({triggerElement:'#mg1', offset: -50, duration: 1000})
+	.setTween("#mg1", 100, {opacity: 1})
+	.setPin('#mg1')
+ 	.addTo(controller)
+	.addIndicators({name: "1"});
+var scene_mg1b = new ScrollMagic.Scene({triggerElement:'#mg1', offset: 1200, duration: 300})
+	.setTween("#mg1", 1, {opacity: 0})
+	.setPin('#mg1')
+ 	.addTo(controller)
+ 	.addIndicators({name: "2"});	
+
+//flecha
+var scene_flecha = new ScrollMagic.Scene({triggerElement: "#flecha", offset:-200, duration: 500, tweenChanges: true})
+	.setTween('#flecha', .5, {width:350, scaleX:1})
+	.addIndicators({name: "flecha"}) // add indicators (requires plugin)
+	.addTo(controller);	
 
 //casa, solo escena, set pin es lo más importante
 var scene_casa = new ScrollMagic.Scene({triggerElement:'#casa',	offset: -50,duration: 3500})
@@ -112,15 +206,15 @@ function pathPrepare ($el) {
 		.addTo(controller);		
 
 //graph http://greensock.com/svg-tips
-var scene_write = new ScrollMagic.Scene({triggerElement: "#graph", duration: 300, tweenChanges: true})
-	.setTween('.boxg', .1, {x:0, scaleX:4, rotation:0, opacity:.5, fill:"#ff0000"})
+var scene_graph = new ScrollMagic.Scene({triggerElement: "#graph", duration: 800, tweenChanges: true})
+	.setTween('.boxg', 1, {x:10, scaleX:4, rotation:0, opacity:1, fill:"#ff0000"})
+	.setPin('#graph')
 	.addIndicators({name: "g"}) // add indicators (requires plugin)
 	.addTo(controller);	
-
-//flecha
-var scene_flecha = new ScrollMagic.Scene({triggerElement: "#flecha", offset:-200, duration: 300, tweenChanges: true})
-	.setTween('#flecha', .5, {width:220, scaleX:1.5})
-	.addIndicators({name: "flecha"}) // add indicators (requires plugin)
+//graph title
+var scene_graph_title = new ScrollMagic.Scene({triggerElement: "#propiedades", duration: 800, tweenChanges: true})
+	.setTween('#propiedades', 1, {opacity:1})
+	.setPin('#propiedades')
 	.addTo(controller);	
 
 
@@ -148,35 +242,7 @@ var scene5 = new ScrollMagic.Scene({triggerElement: "#trigger2", offset:1500, du
 	.addTo(controller);
 
 //add scenes here
-//conejo, hombre andando
-var images = [
-	"img/man1.png",
-	"img/man2.png",
-	"img/man3.png",
-	"img/man4.png",
-	"img/man5.png"
-	];
-	// TweenMax can tween any property of any object. We use this object to cycle through the array
-	// create tween
-	var obj = {curImg: 0};
-	var conejo = TweenMax.to(obj, 0.2, 
-		{
-		curImg: images.length - 1,	// animate propery curImg to number of images
-		roundProps: "curImg",				// only integers so it can be used as an array index
-		repeat: 20,									// repeat 3 times
-		immediateRender: true,			// load first image automatically
-		ease: Linear.easeNone,			// show every image the same ammount of time
-		onUpdate: function () {
-		  $("#conejo").attr("src", images[obj.curImg]); // set the image source
-			}
-		}
-	);
-	// build scene
-	var scene_conejo = new ScrollMagic.Scene({triggerElement: "#imagesequence", offset:-200, duration: 8000})
-		.setTween(conejo)
-		.setPin("#imagesequence")
-		.addIndicators({name: "conejo"}) // add indicators (requires plugin)
-		.addTo(controller);
+
 
 
 //use keys to jump to anchors

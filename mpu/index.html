@@ -3,12 +3,15 @@
 <head>
 	<meta charset="utf-8"> 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=500" />
+<!-- 	<meta name="viewport" content="width=500" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" /> 
+
 	<meta name="keywords" content="ScrollMagic, example, scrolling, attaching, scrollbar, parallax" />
 	<meta name="author"	content="Jan Paepke (www.janpaepke.de)" />
-	<title>Parallax Scrolling - Examples - ScrollMagic</title>
+	<title>Queso sano</title>
 
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/examples.css" type="text/css">
@@ -64,9 +67,7 @@
 		</div>
 
 	</section>
-
 				<div class="spacer s0"></div>
-
 	<section class="demo fullwidth">
 		<div id="parallaxContainer">
 			<div class="layer1"></div>
@@ -74,8 +75,15 @@
 			<div class="layer3"></div>
 		</div>
 
+		<div id="walksequence">
+			<img id="manwalk" style="height:280px;">
+		</div>
 		<div id="casa">
 			<img src="img/casa.png" style="width:500px;">
+		</div>
+
+		<div id="mg1">
+			<div class="mg_tx">Hola, soy Marco, os voy a acompañar en un viaje para que conozcáis como se fabrica este queso extraodirnario</div>
 		</div>
 
 		<div id="pop1">
@@ -87,6 +95,14 @@
 	    <div id="muneco">
 			<img src="img/gente1.png">
 		</div>
+
+		<!-- reloj -->
+		<div id="flecha">
+			<div id="flecha_in"><img src="img/arrow-wood-engraved.png"></div>
+	    </div>
+    	<div id="clock"><img src="img/clock.png" height="200"></div>
+    	<div id="saeta1"></div>
+    	<div id="saeta2"></div>
 
 	    <div id="coche">
 			<img src="img/car_orange.png" style="width:150px;">
@@ -120,23 +136,23 @@
 			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	     		width="600px" height="205.061px" viewBox="0 0 600 205.061" style="enable-background:new 0 0 600 205.061;" xml:space="preserve">
 			<style type="text/css">
-	    		.rule{stroke:#D3D3D3;stroke-miterlimit:10;}
-	    		.boxg{fill:#88ce02;}
+
 			</style>
-				<line class="rule" x1="181.223" y1="0" x2="181.223" y2="205.061"/>
+				<line class="rule" x1="181.223" y1="0" x2="181.223" y2="200"/>
 				<rect x="18.24" y="11.245" class="boxg" width="163.319" height="38.865"/>
 				<rect x="53.611" y="58.843" class="boxg" width="127.948" height="38.865"/>
 				<rect x="105.14" y="107.314" class="boxg" width="76.419" height="38.865"/>
 				<rect x="142.694" y="154.773" class="boxg" width="38.865" height="38.865"/>
 			</svg>
-			<button id="play" class="dark-grey-button club-demo-button">play</button>
 		</div>
 
-	    <div id="flecha">
-			<div id="flecha_in">
-				<img src="img/flecha.png">
-			</div>
-	    </div>
+		<div id="propiedades">
+			<div class="">Composición del queso</div>
+			<div class="items">Hidratos</div>
+			<div class="items">Glucosa</div>
+			<div class="items">Proteina</div>
+			<div class="items">Grasa</div>
+		</div>	
 
 
 	</section>
@@ -179,3 +195,5 @@
 </div>
 </body>
 </html>
+
+
