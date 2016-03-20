@@ -35,13 +35,14 @@
 	<script type='text/javascript' src='js/jquery.mousewheel.min.js'></script>
 
 	<script type="text/javascript" src="js/scene.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 </head>
 
 <body>
 <form class="move">
 	<fieldset>
-		<legend>Anchor Links</legend>
+		<legend>Navegador</legend>
 		<p><a href="#top">Top</a></p>
 		<p><a href="#middle">Middle</a></p>
 		<p><a href="#bottom">Bottom</a></p>
@@ -52,10 +53,10 @@
 <div id="content-wrapper">
  <div id="example-wrapper" class="horizontal">
   <div class="scrollContent">
-	<section id="titlechart">
+<section id="titlechart"> <!--ver esta id para ajustar ancho fiho o variable de la primera seccion-->
 		<div id="description">
-			<h1>Parallax Scrolling</h1>
-			<h2>No big deal, if you have ScrollMagic.</h2>
+			<h1></h1>
+			<h2></h2>
 		</div>
 
 		<div id="draggable" class="ui-widget-content">
@@ -66,18 +67,77 @@
     	  </ul>
 		</div>
 
-	</section>
-				<div class="spacer s0"></div>
-	<section class="demo fullwidth">
+
+	<div class="tit01"><img src="img/tit_queso_parmesano.png"></div>
+	<div class="queso_portada"><img src="img/queso_portada.png" style="width: 600px;"></div>
+
+	<div id="walksequence">
+		<img id="manwalk" style="height:280px;">
+	</div>
+
+	<div class="level1" id="txt01">El Parmigiano más saludable</div>
+	<div class="level1" id="txt02"> → → → → → → → → → → → →</div>
+
+	<div id="txt03" class="mg_tx">Hola, soy Gustavo, voy a ser vuestro guía para que conozcais mejor el queso Parmegiano</div>
+
+</section>
+
+	<div class="spacer s0"></div>
+
+<section class="demo fullwidth">
+
 		<div id="parallaxContainer">
 			<div class="layer1"></div>
 			<div class="layer2"></div>
 			<div class="layer3"></div>
 		</div>
 
-		<div id="walksequence">
-			<img id="manwalk" style="height:280px;">
+	<div class="tit02"><img src="img/tit_elaboracion.png"></div>
+
+		<div id="molino">
+			<img src="img/molino.png">
+			<img id="molino_aspa" src="img/molino_aspa.png">
 		</div>
+		<div id="cow1" class="monster"></div> <!--vaca-->
+		<div id="cow2" class="monster"></div> <!--vaca-->	
+		<div id="txt04" >	
+			<div class="number">1</div>
+			<div class="mg_tx_long">En primer lugar se calienta la leche que ha ordeñado el granjero. Después, se añade el suero injerto, un cultivo de fermentos lácteos naturales que se obtiene del resto de la elaboración del día anterior.</div>		
+		</div>
+
+		<div id="farmer"><img src="img/farmer.png" height="200px"></div>
+
+	<div id="txt05" class="mg_tx">Buenos días Ricardo</div>
+
+		<div id="txt06" >	
+			<div class="number">2</div>
+			<div class="mg_tx_long">A continuación se añade el cuajo (enzima natural obtenida del estómago de los terneros lactantes) que provoca la coagulación de la leche. La leche coagulada (cuajada) se fragmenta con una curiosa herramienta con largo mango y alambres denominada “spino” en numerosos granos pequeños. Al final, los granos se depositan en el fondo del caldero formando una masa compacta. La masa caseosa se extrae del caldero y se divide en dos partes.</div>		
+		</div>
+
+		<div id="pan"><img src="img/pan.png" height="150px"></div>
+
+		<div id="txt07" >	
+			<div class="number">3</div>
+			<div class="mg_tx_long">Las formas se colocan en moldes especiales llamados “fascere” durante 2 o 3 días. Por último, queda la fase de maduración, que durará 15 meses.</div>		
+		</div>
+
+		<div id="barn2"><img src="img/barn3.png"></div>
+
+		<div id="tv2"><img src="img/TV2.png" width="490" height="380"></div>
+		<div id="video"></div>
+
+		<div id="txt08" class="mg_tx">Un momento, vamos a ver un vídeo sobre como ordeñar una vaca</div>
+
+
+
+		<div id="mountain"><img src="img/mountain.png"></div>
+
+
+
+
+
+
+
 		<div id="casa">
 			<img src="img/casa.png" style="width:500px;">
 		</div>
@@ -86,9 +146,15 @@
 			<div class="mg_tx">Hola, soy Marco, os voy a acompañar en un viaje para que conozcáis como se fabrica este queso extraodirnario</div>
 		</div>
 
+		<div id="mg2">
+			<div class="mg_tx_long">El queso es un alimento, que se elabora de la leche cuajada de la vaca, cabra, oveja, búfalo, camello u otros mamíferos, la leche en su estado natural es inducida a cuajarse con el cuajo o algún otro suplemento similar y con la acidificación. Las bacterias se encargan de acidar la leche y son los que determinan la textura y el sabor de los quesos, algunos contienen mohos en la superficie y al interior.</div>
+		</div>
+
 		<div id="pop1">
 			<div class="bocadillo">Soy Gustavo <br>y esta es mi casa</div>
 		</div>
+
+
 
 		<a id="top"></a>
 
@@ -100,9 +166,12 @@
 		<div id="flecha">
 			<div id="flecha_in"><img src="img/arrow-wood-engraved.png"></div>
 	    </div>
-    	<div id="clock"><img src="img/clock.png" height="200"></div>
-    	<div id="saeta1"></div>
-    	<div id="saeta2"></div>
+	    <div id="reloj">
+    		<div id="clock"><img src="img/clock.png" height="200"></div>
+    		<div id="saeta1"></div>
+    		<div id="saeta2"></div>
+    	</div>
+
 
 	    <div id="coche">
 			<img src="img/car_orange.png" style="width:150px;">
@@ -124,20 +193,24 @@
 
 		<div id="writing">
 		<!-- si el svg proviene de inkscape ajustar la propiedad translate para ajustarlo -->
-			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="650" height="150" style="border:red solid 1px;">
-				<path id="word" style="" transform="translate(-88.017 -112.86)"
-				  fill="#ff0000" stroke="#000000" stroke-width="1px" 
-				  d="m88.021 135.54 490.73 3.8947m94.545-2.2015-93.979 28.574-0.55615-52.306z"/>
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="650" height="300" style="">
+				<path id="lineAB" d="M 0 100 l 100 0 l 0 -50 l 400 0" stroke="red" stroke-linejoin="round" stroke-width="30" fill="none" />  
+				<path id="lineCD" d="M 0 150 l 200 0 l 0 -50 l 300 0" stroke="green" stroke-linejoin="round" stroke-width="30" fill="none" />  			
+				<path id="lineEF" d="M 0 200 l 300 0 l 0 -50 l 200 0" stroke="yellow" stroke-linejoin="round" stroke-width="30" fill="none" /> 
 			</svg>
+		</div>
+
+		<!-- Graph2 -->
+		<div id="graph2">
+			<div id="graph2a" class="label_gr">Hidratos</div>
+			<div id="graph2b" class="label_gr">Grasas</div>
+			<div id="graph2c" class="label_gr">Agua</div>
+			<div id="graph2d" class="label_gr">Proteina</div>
 		</div>
 
 		<!-- Graph -->
 		<div id="graph">
-			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	     		width="600px" height="205.061px" viewBox="0 0 600 205.061" style="enable-background:new 0 0 600 205.061;" xml:space="preserve">
-			<style type="text/css">
-
-			</style>
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px" height="205.061px" viewBox="0 0 600 205.061" style="enable-background:new 0 0 600 205.061;" xml:space="preserve">
 				<line class="rule" x1="181.223" y1="0" x2="181.223" y2="200"/>
 				<rect x="18.24" y="11.245" class="boxg" width="163.319" height="38.865"/>
 				<rect x="53.611" y="58.843" class="boxg" width="127.948" height="38.865"/>
@@ -154,10 +227,36 @@
 			<div class="items">Grasa</div>
 		</div>	
 
+		<div class="bezier">
+		  <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="14"/></svg>
+		</div>
 
-	</section>
+		<div class="rasca">
+		<canvas id="maincanvas"></canvas>
+		</div>
+
+	    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
+<!-- Ejemplo de como seguir un camino: 
+https://davidwalsh.name/gsap-svg 
+http://webdesign.tutsplus.com/tutorials/timelinemax-getting-a-handle-on-bezier-tweening--cms-23981
+-->
+
+		<div id="target_pajaro">
+			<img id="pajaro" src="img/car_blue.png">
+		</div>
+</section>
+
 
 	<section class="demo">
+		<div id="parallaxContainer2">
+			<div class="layerb1"></div>
+			<div class="layerb2"></div>
+			<div class="layerb3"></div>
+		</div>
+
+
+
 		<div class="spacer s2"></div>
 		<div id="trigger1" class="spacer s0"></div>
 		<div id="animate1" class="box2 skin">
@@ -193,6 +292,10 @@
   </div>
  </div>
 </div>
+
+
+
+
 </body>
 </html>
 

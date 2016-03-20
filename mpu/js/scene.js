@@ -10,10 +10,89 @@ var tween1 = new TimelineMax ()
 	//TweenMax.to("#parallaxContainer .layer3", 1, {backgroundPosition: "-200% 100%", ease: Linear.easeNone})
 		]);
 // Animate parallax
-var scene1 = new ScrollMagic.Scene({triggerElement: "#parallaxContainer", offset:$(window).width(), duration: 8500 })
+var scene1 = new ScrollMagic.Scene({triggerElement: "#parallaxContainer", offset:-300, duration: 8500 })
 	.setTween(tween1)
 	//.setPin("#parallaxContainer")
-	.addIndicators({name: "paisaje"}) // add indicators (requires plugin)
+	//.addIndicators({name: "paisaje"}) // add indicators (requires plugin)
+	.addTo(controller);
+
+// hola soy Gustavo
+var scene_txt03 = new ScrollMagic.Scene({triggerElement: "#txt03", offset: 200, duration: 300,})
+	.setTween("#txt03", 1, {opacity: 1,})
+	.setPin("#txt03") 
+	.addTo(controller)
+var scene_txt0b = new ScrollMagic.Scene({triggerElement: "#txt03", offset: 500, duration: 100,})
+	.setTween("#txt03", 1, {opacity: 0,})
+	.setPin("#txt03") 
+	.addTo(controller)
+
+//texto elaboracion 1
+var scene_txt04 = new ScrollMagic.Scene({triggerElement: "#txt04", offset: 200, duration: 300,})
+	.setTween("#txt04", 1, {opacity: 1,})
+	.setPin("#txt04") 
+	.addTo(controller)
+
+//buenos dias Ricardo
+var scene_txt05 = new ScrollMagic.Scene({triggerElement: "#txt05", offset: -100, duration: 300,})
+	.setTween("#txt05", 1, {opacity: 1,})
+	.setPin("#txt05") 
+	.addTo(controller)
+var scene_txt05b = new ScrollMagic.Scene({triggerElement: "#txt05", offset: 500, duration: 100,})
+	.setTween("#txt05", 1, {opacity: 0,})
+	.setPin("#txt05") 
+	.addTo(controller)
+
+//texto elaboracion 2
+var scene_txt06 = new ScrollMagic.Scene({triggerElement: "#txt06", offset: 200, duration: 300,})
+	.setTween("#txt06", 1, {opacity: 1,})
+	.setPin("#txt06") 
+	.addTo(controller)
+
+//texto elaboracion 3
+var scene_txt07 = new ScrollMagic.Scene({triggerElement: "#txt07", offset: 200, duration: 100,})
+	.setTween("#txt07", 1, {opacity: 1,})
+	.setPin("#txt07") 
+	.addTo(controller)
+
+//trigger video cuando el scroll sea mayor de 300
+var video1 = 0
+function green() {
+	if ($(window).scrollLeft()>6000 && video1 == 0){ //no permitas que se inicie cada vez que se mueva el cursor
+		//$('#video').css('top','0');
+		$('#video').html('<iframe width="400" height="290" src="https://www.youtube.com/embed/g6u-hGnCYsI?autoplay=1&loop=1&playlist=g6u-hGnCYsI" frameborder="0" allowfullscreen></iframe>');
+		$('#tv2').css({'opacity':'1', 'z-index':'0'});
+		video1 = 1
+	}
+}
+green();
+$(window).scroll(green);
+
+//vamos a ver un video
+var scene_txt08 = new ScrollMagic.Scene({triggerElement: "#txt08", offset: -100, duration: 300,})
+	.setTween("#txt08", 1, {opacity: 1,})
+	.setPin("#txt08") 
+	.addTo(controller)
+var scene_txt08b = new ScrollMagic.Scene({triggerElement: "#txt08", offset: 500, duration: 100,})
+	.setTween("#txt08", 1, {opacity: 0,})
+	.setPin("#txt08") 
+	.addTo(controller)
+
+
+
+
+
+//Parallax 2
+var tween_para2 = new TimelineMax ()
+	.add([
+	TweenMax.to("#parallaxContainer2 .layerb1", 1, {backgroundPosition: "-40% 0", ease: Linear.easeNone}),
+	TweenMax.to("#parallaxContainer2 .layerb2", 1, {backgroundPosition: "-125% 0", ease: Linear.easeNone}),
+	//TweenMax.to("#parallaxContainer .layer3", 1, {backgroundPosition: "-200% 100%", ease: Linear.easeNone})
+		]);
+// Animate parallax
+var scene1 = new ScrollMagic.Scene({triggerElement: "#parallaxContainer2", offset:-300, duration: 8500 })
+	.setTween(tween_para2)
+	//.setPin("#parallaxContainer")
+	//.addIndicators({name: "paisaje"}) // add indicators (requires plugin)
 	.addTo(controller);
 
 //draggable box
@@ -66,7 +145,7 @@ var imgwalk = [
 		{
 		curImg: imgwalk.length - 1,	// animate propery curImg to number of images
 		roundProps: "curImg",				// only integers so it can be used as an array index
-		repeat: 10,									// repeat 3 times
+		repeat: 5,									// repeat 3 times
 		immediateRender: true,			// load first image automatically
 		ease: Linear.easeNone,			// show every image the same ammount of time
 		onUpdate: function () {
@@ -75,7 +154,7 @@ var imgwalk = [
 		}
 	);
 	// build scene
-	var scene_manwalk = new ScrollMagic.Scene({triggerElement: "#walksequence", offset: 0, duration: 8000})
+	var scene_manwalk = new ScrollMagic.Scene({triggerElement: "#walksequence", offset: 300, duration: 8000})
 		.setTween(manwalk)
 		.setPin("#walksequence")
 		.addIndicators({name: "manwalk"}) // add indicators (requires plugin)
@@ -125,8 +204,89 @@ var scene_mg1b = new ScrollMagic.Scene({triggerElement:'#mg1', offset: 1200, dur
 
 //flecha
 var scene_flecha = new ScrollMagic.Scene({triggerElement: "#flecha", offset:-200, duration: 500, tweenChanges: true})
-	.setTween('#flecha', .5, {width:350, scaleX:1})
-	.addIndicators({name: "flecha"}) // add indicators (requires plugin)
+	.setTween('#flecha', .5, {rotation: 0, scaleX:1})
+	.addTo(controller);	
+//reloj
+var scene_reloj = new ScrollMagic.Scene({triggerElement: "#reloj", offset:-400, duration: 500, tweenChanges: true})
+	.setTween('#reloj', .5, {top: 70, scaleX:1})
+	.addIndicators({name: "reloj"}) // add indicators (requires plugin)
+	.addTo(controller);	
+
+
+
+//trigger barchar cuando el scroll sea mayor de 9500
+var bc1 = 0
+
+function barchar() {
+	if ($(window).scrollLeft()>8500 && $(window).scrollLeft()<9500 && bc1 == 0){ //no permitas que se inicie cada vez que se mueva el cursor
+		//$('#video').css('top','0');
+		$('#graph2a').animate({'width':'400'}, 1000);
+		$('#graph2b').animate({'width':'500'}, 1000);
+		$('#graph2c').animate({'width':'300'}, 1000);
+		$('#graph2d').animate({'width':'200'}, 1000);		
+		bc1 = 1
+	}
+	if ($(window).scrollLeft()>9500 && bc1 == 1){ //no permitas que se inicie cada vez que se mueva el cursor
+		//$('#video').css('top','0');
+		$('#graph2a').animate({'width':'0'}, 1000);
+		$('#graph2b').animate({'width':'0'}, 1000);
+		$('#graph2c').animate({'width':'0'}, 1000);
+		$('#graph2d').animate({'width':'0'}, 1000);		
+		bc1 = 0
+	}
+}
+barchar();
+$(window).scroll(barchar);
+
+//bezier
+var tl = new TimelineMax({
+  repeat: -1,
+  yoyo: true
+});
+var bezier_path = [	{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 150 }, { x: 200, y: 150 },
+					{ x: 300, y: 200 }, { x: 300, y: 0 }, { x: 0, y: 0 }];
+
+tl.staggerTo($('.bezier > svg'), 5, { bezier: {
+  type: 'thru',
+  values: bezier_path,
+  curviness: 0.5
+}, ease: Power1.easeInOut }, 0.0222);
+
+//volando
+var flightpath = {	
+		entry : {	curviness: 2, autoRotate: true, values: [
+											 {x: 0, y: 0 }, 
+											 { x: 100, y: 0 }, 
+											 { x: 100, y: 150 }, 
+											 { x: 200, y: 150 }]},
+		looping : {	curviness: 1.25, autoRotate: true,	values: [
+											{x: 510,	y: 60},
+											{x: 620,	y: -60},
+											{x: 500,	y: -100},
+											{x: 380,	y: 20},
+											{x: 500,	y: 60},
+											{x: 580,	y: 20},
+											{x: 620,	y: 15}]},
+		leave : {curviness: 1.25, autoRotate: true,	values: [
+											{x: 660,	y: 20},
+											{x: 800,	y: 130},
+											{x: $(window).width() + 300,	y: -100},]}};
+
+
+//var flightpath =[{ x: 200, y: 1000 }, { x: 100, y: 0 }, { x: 100, y: 150 }, { x: 200, y: 150 }];
+var tween_flight = new TimelineMax()
+	.add(TweenMax.to($("#pajaro"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
+	//.add(TweenMax.to($("#pajaro"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
+	//.add(TweenMax.to($("#pajaro"), 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
+var scene_pajaro = new ScrollMagic.Scene({triggerElement: "#target_pajaro", duration: 1000, offset: 100})
+	.setPin("#target_pajaro")
+	.setTween(tween_flight)
+	.addTo(controller);
+
+//piechart
+piechart_3d
+var scene_piechart = new ScrollMagic.Scene({triggerElement: "#piechart_3d", offset:-200, duration: 500, tweenChanges: true})
+	.setTween('#piechart_3d', .5, {rotation: 0, scaleX:1})
 	.addTo(controller);	
 
 //casa, solo escena, set pin es lo más importante
@@ -153,8 +313,8 @@ var scene_pop3 = new ScrollMagic.Scene({triggerElement:'#pop1', offset:1600, dur
 
 // Create tween muñeco
 var mun = new TweenMax.fromTo('#muneco', .5, 
-	{scale: .05, rotation: 0, top: 0},
-   	{scale: 1, top: 50});
+	{scale: .05, rotation: -10, top: 0},
+   	{scale: 1, rotation: 0, top: 50});
 var scene_mun = new ScrollMagic.Scene({triggerElement:'#muneco', offset:0, duration:300,})
 	.setTween(mun)
  	.addTo(controller)
@@ -196,14 +356,32 @@ function pathPrepare ($el) {
 	$el.css("stroke-dashoffset", lineLength);
 	console.log(lineLength);
 	}
-	var $word = $("path#word");	
+	var $word = $("path#lineAB");	
 	pathPrepare($word);
 	var tween_write = new TimelineMax()
-		.add(TweenMax.to($word, 3, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
+		.add(TweenMax.to($word, 2, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
+	var scene_write = new ScrollMagic.Scene({triggerElement: "#writing", duration: 300, tweenChanges: true})
+		.setTween(tween_write)
+		.addTo(controller);		
+
+	var $word = $("path#lineCD");	
+	pathPrepare($word);
+	var tween_write = new TimelineMax()
+		.add(TweenMax.to($word, 2, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
 	var scene_write = new ScrollMagic.Scene({triggerElement: "#writing", duration: 300, tweenChanges: true})
 		.setTween(tween_write)
 		.addIndicators({name: "write"}) // add indicators (requires plugin)
 		.addTo(controller);		
+
+	var $word = $("path#lineEF");	
+	pathPrepare($word);
+	var tween_write = new TimelineMax()
+		.add(TweenMax.to($word, 2, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
+	var scene_write = new ScrollMagic.Scene({triggerElement: "#writing", duration: 300, tweenChanges: true})
+		.setTween(tween_write)
+		.addIndicators({name: "write"}) // add indicators (requires plugin)
+		.addTo(controller);	
+
 
 //graph http://greensock.com/svg-tips
 var scene_graph = new ScrollMagic.Scene({triggerElement: "#graph", duration: 800, tweenChanges: true})
@@ -260,8 +438,6 @@ $(document).keypress(function(e) {
 //move to next - previous section see: http://jsfiddle.net/yn6maby0/25/
 
 
-
-
 //mouse wheel scrolls horizontal
 $("html, body").mousewheel(function(event, delta) {
     this.scrollLeft -= (delta * 30);
@@ -281,8 +457,302 @@ function show() {
     //var posY = $(window).scrollTop();
     var posX = $(window).scrollLeft() + $(window).width()/2; 
     $("#coordinates").html("Left: " + posX + " px");
+
 }
 show();
 $(window).scroll(show);
 
-});
+//=============================================================
+//=======	Google graphs 						===============
+//=============================================================
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Fementación', 3],
+          ['Sedimentación', 2],
+          ['Desidratación', 2],
+          ['Solidificación', 2],
+          ['Sustentación', 7]
+        ]);
+
+        var options = {
+          title: 'Distribución del tiempo de elaboración (días)',
+          is3D: true,
+          backgroundColor: 'transparent',
+          slices: {
+            0: {color: '#00ff00'}, //transparent
+            1: {color: '#ff0000'},
+            2: {color: '#0000ff'},
+            3: {color: '#00ffff'},
+            4: {color: '#ffff00'},
+          }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+
+
+
+}); //end function line 3
+
+
+
+
+
+
+//=============================================================
+//=======	RASCA EL CODIGO SECRETO 			===============
+//=============================================================
+
+(function() {
+
+var image = { // back and front images
+	'back': { 'url':'img/backimage.png', 'img':null },
+	'front': { 'url':'img/foreimage.png', 'img':null }
+};
+
+var canvas = {'temp':null, 'draw':null}; // temp and draw canvases
+
+var mouseDown = false;
+
+/**
+ * Helper function to get the local coords of an event in an element,
+ * since offsetX/offsetY are apparently not entirely supported, but
+ * offsetLeft/offsetTop/pageX/pageY are!
+ *
+ * @param elem element in question
+ * @param ev the event
+ */
+function getLocalCoords(elem, ev) {
+	var ox = 0, oy = 0;
+	var first;
+	var pageX, pageY;
+
+	// Walk back up the tree to calculate the total page offset of the
+	// currentTarget element.  I can't tell you how happy this makes me.
+	// Really.
+	while (elem != null) {
+		ox += elem.offsetLeft;
+		oy += elem.offsetTop;
+		elem = elem.offsetParent;
+	}
+
+	if (ev.hasOwnProperty('changedTouches')) {
+		first = ev.changedTouches[0];
+		pageX = first.pageX;
+		pageY = first.pageY;
+	} else {
+		pageX = ev.pageX;
+		pageY = ev.pageY;
+	}
+
+	return { 'x': pageX - ox, 'y': pageY - oy };
+}
+
+/**
+ * Recomposites the canvases onto the screen
+ *
+ * Note that my preferred method (putting the background down, then the
+ * masked foreground) doesn't seem to work in FF with "source-out"
+ * compositing mode (it just leaves the destination canvas blank.)  I
+ * like this method because mentally it makes sense to have the
+ * foreground drawn on top of the background.
+ *
+ * Instead, to get the same effect, we draw the whole foreground image,
+ * and then mask the background (with "source-atop", which FF seems
+ * happy with) and stamp that on top.  The final result is the same, but
+ * it's a little bit weird since we're stamping the background on the
+ * foreground.
+ *
+ * OPTIMIZATION: This naively redraws the entire canvas, which involves
+ * four full-size image blits.  An optimization would be to track the
+ * dirty rectangle in scratchLine(), and only redraw that portion (i.e.
+ * in each drawImage() call, pass the dirty rectangle as well--check out
+ * the drawImage() documentation for details.)  This would scale to
+ * arbitrary-sized images, whereas in its current form, it will dog out
+ * if the images are large.
+ */
+function recompositeCanvases() {
+	var main = document.getElementById('maincanvas');
+	var tempctx = canvas.temp.getContext('2d');
+	var mainctx = main.getContext('2d');
+
+	// Step 1: clear the temp
+	canvas.temp.width = canvas.temp.width; // resizing clears
+
+	// Step 2: stamp the draw on the temp (source-over)
+	tempctx.drawImage(canvas.draw, 0, 0);
+
+	/* !!!! this way doesn't work on FF:
+		// Step 3: stamp the foreground on the temp (!! source-out mode !!)
+		tempctx.globalCompositeOperation = 'source-out';
+		tempctx.drawImage(image.front.img, 0, 0);
+
+		// Step 4: stamp the background on the display canvas (source-over)
+		//mainctx.drawImage(image.back.img, 0, 0);
+
+		// Step 5: stamp the temp on the display canvas (source-over)
+		mainctx.drawImage(canvas.temp, 0, 0);
+	*/
+
+	// Step 3: stamp the background on the temp (!! source-atop mode !!)
+	tempctx.globalCompositeOperation = 'source-atop';
+	tempctx.drawImage(image.back.img, 0, 0);
+
+	// Step 4: stamp the foreground on the display canvas (source-over)
+	mainctx.drawImage(image.front.img, 0, 0);
+
+	// Step 5: stamp the temp on the display canvas (source-over)
+	mainctx.drawImage(canvas.temp, 0, 0);
+}
+
+/**
+ * Draw a scratch line
+ * 
+ * @param can the canvas
+ * @param x,y the coordinates
+ * @param fresh start a new line if true
+ */
+function scratchLine(can, x, y, fresh) {
+	var ctx = can.getContext('2d');
+	ctx.lineWidth = 50;
+	ctx.lineCap = ctx.lineJoin = 'round';
+	ctx.strokeStyle = '#000'; // can be any opaque color
+	if (fresh) {
+		ctx.beginPath();
+		// this +0.01 hackishly causes Linux Chrome to draw a
+		// "zero"-length line (a single point), otherwise it doesn't
+		// draw when the mouse is clicked but not moved:
+		ctx.moveTo(x+0.01, y);
+	}
+	ctx.lineTo(x, y);
+	ctx.stroke();
+}
+
+/**
+ * Set up the main canvas and listeners
+ */
+function setupCanvases() {
+	var c = document.getElementById('maincanvas');
+	// set the width and height of the main canvas from the first image
+	// (assuming both images are the same dimensions)
+	c.width = image.back.img.width;
+	c.height = image.back.img.height;
+
+	// create the temp and draw canvases, and set their dimensions
+	// to the same as the main canvas:
+	canvas.temp = document.createElement('canvas');
+	canvas.draw = document.createElement('canvas');
+	canvas.temp.width = canvas.draw.width = c.width;
+	canvas.temp.height = canvas.draw.height = c.height;
+
+	// draw the stuff to start
+	recompositeCanvases();
+
+	/**
+	 * On mouse down, draw a line starting fresh
+	 */
+	function mousedown_handler(e) {
+		var local = getLocalCoords(c, e);
+		mouseDown = true;
+
+		scratchLine(canvas.draw, local.x, local.y, true);
+		recompositeCanvases();
+
+		if (e.cancelable) { e.preventDefault(); } 
+		return false;
+	};
+
+	/**
+	 * On mouse move, if mouse down, draw a line
+	 *
+	 * We do this on the window to smoothly handle mousing outside
+	 * the canvas
+	 */
+	function mousemove_handler(e) {
+		if (!mouseDown) { return true; }
+
+		var local = getLocalCoords(c, e);
+
+		scratchLine(canvas.draw, local.x, local.y, false);
+		recompositeCanvases();
+
+		if (e.cancelable) { e.preventDefault(); } 
+		return false;
+	};
+
+	/**
+	 * On mouseup.  (Listens on window to catch out-of-canvas events.)
+	 */
+	function mouseup_handler(e) {
+		if (mouseDown) {
+			mouseDown = false;
+			if (e.cancelable) { e.preventDefault(); } 
+			return false;
+		}
+
+		return true;
+	};
+
+	c.addEventListener('mousedown', mousedown_handler, false);
+	c.addEventListener('touchstart', mousedown_handler, false);
+
+	window.addEventListener('mousemove', mousemove_handler, false);
+	window.addEventListener('touchmove', mousemove_handler, false);
+
+	window.addEventListener('mouseup', mouseup_handler, false);
+	window.addEventListener('touchend', mouseup_handler, false);
+}
+
+/**
+ * Set up the DOM when loading is complete
+ */
+function loadingComplete() {
+	var loading = document.getElementById('loading');
+	var main = document.getElementById('main');
+
+	loading.className = 'hidden';
+	main.className = '';
+}
+
+/**
+ * Handle loading of needed image resources
+ */
+function loadImages() {
+	var loadCount = 0;
+	var loadTotal = 0;
+	var loadingIndicator;
+
+	function imageLoaded(e) {
+		loadCount++;
+
+		if (loadCount >= loadTotal) {
+			setupCanvases();
+			loadingComplete();
+		}
+	}
+
+	for (k in image) if (image.hasOwnProperty(k))
+		loadTotal++;
+
+	for (k in image) if (image.hasOwnProperty(k)) {
+		image[k].img = document.createElement('img'); // image is global
+		image[k].img.addEventListener('load', imageLoaded, false);
+		image[k].img.src = image[k].url;
+	}
+}
+
+/**
+ * Handle page load
+ */
+window.addEventListener('load', function() {
+	var resetButton = document.getElementById('resetbutton');
+
+	loadImages();
+
+}, false);
+
+})();

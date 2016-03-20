@@ -50,7 +50,8 @@ section#titlechart {
 	position: relative;
 	height: 100%;
 	min-height: 500px;
-	min-width: 100%;
+	width: 1950px;/*fijar el ancho*/
+	/*min-width: 100%; ancho automatico*/
 	height: 100vh;
 }
 .horizontal section, .horizontal section#titlechart{
@@ -97,12 +98,12 @@ section#titlechart #description ol {
 	list-style-position: outside;
 }
 #example-wrapper section#titlechart #description:after {
-	content: "↧";
+	/*content: "↧";*/
 	font-size: 40px;
 	display: block;
 }
 #example-wrapper.horizontal section#titlechart #description:after {
-	content: "↦";
+	/*content: "↦";*/
 }
 
 
@@ -357,7 +358,7 @@ h1.badge.velocity:after {
 form.move {
 	text-align: left;
 	position: fixed;
-	top: 70px;
+	top: 50%;
 	left: 20px;
 	display: block;
 	background-color: white;

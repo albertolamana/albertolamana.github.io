@@ -1,5 +1,142 @@
+/*================================================================*/
+/*================   Estilos fijos         =======================*/
+/*================================================================*/
+
+.mg_tx{
+	width: 250px;
+	height: auto;
+	border-radius: 50px;
+	background-color: rgba(230,230,230,.8);
+	padding: 20px;
+	border: black solid 3px;	
+    display: inline-block;
+    max-width: none;
+    text-overflow: initial;
+    white-space: normal;
+    overflow: auto; 
+    position: relative;
+	text-align: left;
+	font-family: 'Gochi Hand', cursive;
+	font-size: 26px;
+	z-index: 99;
+}
+.mg_tx_long{
+	background-color: gray;
+	width: 300px;
+	height: auto;
+	border-radius: 50px;
+	padding: 30px;
+    display: inline-block;
+    max-width: none;
+    text-overflow: initial;
+    white-space: normal;
+    overflow: auto; 
+    position: relative;
+	text-align: left;
+	font-family: 'Gochi Hand', cursive;
+	font-size: 18px;
+	z-index: 99;
+}
+.label_gr{
+	padding: 10px;
+	font-family: 'Gochi Hand', cursive;
+	font-size: 20px;
+	z-index: 99;
+}
+.level1{
+	position: absolute;
+	font-family: 'Gochi Hand', cursive;
+	font-size: 50px;
+	color:#a04b4b;
+}
+.bocadillo{
+	position: absolute;
+	width: 250px;
+	height: 60px;
+	border-radius: 50px;
+	background-color: rgba(230,230,230,.8);
+	padding: 20px;
+	border: black solid 3px;
+	text-align: center;
+	font-family: Arial;
+	font-size: 30px;
+	z-index: 10;
+}
+.number{
+	position: relative;
+	top:30px;
+	left:-30px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	font-size: 80px;
+	font-family: Arial;
+	text-align: center;
+	background-color: red;
+	color:white;
+	z-index: 100;
+}
+/*================================================================*/
+/*================     Section 0        =========================*/
+/*================================================================*/
+ #draggable { 
+	width: 150px; 
+	height: 150px; 
+	padding: 0.5em;
+	font-family: Arial;
+	font-size: 20px;
+	background-color: red;
+	opacity: 0.5;
+	position: absolute;
+	left: 100px;
+	display: none;
+}
+.tit01{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+.queso_portada{
+	position: absolute;
+	top: 25%;
+	left: 30%;	
+}
+
+#walksequence{ /*Hombre andando */
+	position: absolute;
+	bottom: 10%;
+	left:420px;
+	z-index: 20;
+}
+#txt01{
+	top:40%;
+	left: 10%
+}
+
+#txt02{
+	bottom:10%;
+	right: 400px;
+	animation: flechitas 2s linear infinite;	
+	z-index: 10;
+}
+@keyframes flechitas {
+  0% {opacity: 0;}
+  100% {opacity:1;}
+}
+#txt03{
+	position: absolute;
+	top: 20%;
+	left: 1200px;
+	opacity: 0;
+}
+
+
+
+/*================================================================*/
+/*================     Section 1         =========================*/
+/*================================================================*/
 #parallaxContainer {
-	width: 10000px;
+	width: 5600px;
 	height: 100%;
 	top: 0px;
 	position: relative;
@@ -20,91 +157,245 @@
 	top: 0px;
 }
 #parallaxContainer .layer3 {
-	background-image: url("../img/forestas.png");
-	background-position: bottom;
-	background-repeat: repeat-x;
+	background-image: url("../img/fondo_farm.png");
+	background-position: left bottom;
+	position: absolute;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+}
+.tit02{
+	position: absolute;
+	left:2000px;
+	top:5%;
+}
+
+#molino{
+	position: absolute;
+	left:3200px;
+	top:40%;
+}
+#molino_aspa{
+	position: relative;
+	left:-254px;
+	top:-72px;
+	animation: aspa 5s linear infinite;	
+	transform: rotate(30deg);
+    transform-origin: 50% 50%;	
+	z-index: 10;
+}
+@keyframes aspa {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.monster{
+  position: absolute;
+  width: 190px;
+  height: 240px;
+  margin: 2% auto; 
+  background: url('../img/cows_seq.png') left center;  
+  z-index: 10;
+}
+
+#cow1 { /*vaca */
+  left: 2300px;
+  top:50%;
+  animation: playvaca1 2s steps(10) infinite;
+}
+@keyframes playvaca1 {
+    100% { background-position: -1900px; }
+}
+#cow2 { /*vaca */
+  left: 2800px;
+  top:40%;
+  animation: playvaca2 3s steps(10) infinite;
+}
+@keyframes playvaca2 {
+    100% { background-position: -1900px; }
+}
+
+#txt04{
+	position: absolute;
+	top: 5%;
+	left: 2700px;
+	opacity: 0;
+}
+#farmer{
+	position: absolute;
+	left:4000px;
+	bottom: 30%;
+	z-index: 21;
+}
+#txt05{
+	position: absolute;
+	top: 30%;
+	left: 3800px;
+	opacity: 0;
+}
+#txt06{
+	position: absolute;
+	top: 5%;
+	left: 4450px;
+	opacity: 0;
+}
+
+#pan{
+	position: absolute;
+	left:5200px;
+	top: 5%;
+	z-index: 21;
+	animation: pan 3s ease infinite;
+}
+@keyframes pan {
+    0% { left: 5200px; }
+    50% { left: 5300px; }
+    100% { left: 5200px; }
+
+}
+#txt07{
+	position: absolute;
+	top: 5%;
+	left: 5700px;
+	opacity: 0;
+}
+
+#barn2{
+	position: absolute;
+	left:6300px;
+	top:10%;
+	z-index: 0;
+}
+#tv2{
+	position: absolute;
+	top: 40px;
+	left:6705px;
+	opacity: 0;
+	z-index: 10;
+}
+#video{
+	position: absolute;
+	top: 64px;
+	left:6750px;
+	z-index: 10;
+}
+#txt08{
+	position: absolute;
+	top: 5%;
+	left: 6200px;
+	opacity: 0;
+	z-index: 10
+}
+
+
+
+
+
+#mountain{
+	position: absolute;
+	left:7200px;
+	bottom: 0px;
+	z-index: 20;
+}
+
+
+
+
+
+/*================================================================*/
+/*================     Section 2         =========================*/
+/*================================================================*/
+#parallaxContainer2 {
+	width: 7680px;
+	height: 100%;
+	top: 0px;
+	position: relative;
+}
+#parallaxContainer2 .layerb1 {
+	background-image: url("../img/forestc.png");
 	position: absolute;
 	height: 100%;
 	width: 100%;
+	top: 0px;
 }
-
- #draggable { 
-	width: 150px; 
-	height: 150px; 
-	padding: 0.5em;
-	font-family: Arial;
-	font-size: 20px;
-	background-color: red;
-	opacity: 0.5;
+#parallaxContainer2 .layerb2 {
+	background-image: url("../img/forestb.png");
 	position: absolute;
-	left: 100px;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+}
+#parallaxContainer2 .layerb3 {
+	background-image: url("../img/foresta.png");
+	background-position: left bottom;
+	position: absolute;
+	background-repeat: repeat-x;
+	height: 100%;
+	width: 100%;
+	top: 0px;
 }
 
-/*================================================================*/
-/*================   Estilos fijos         =======================*/
-/*================================================================*/
-.mg_tx{
-	width: 250px;
-	height: auto;
-	border-radius: 50px;
-	background-color: rgba(230,230,230,.8);
-	padding: 20px;
-	border: black solid 3px;	
-    display: inline-block;
-    max-width: none;
-    text-overflow: initial;
-    white-space: normal;
-    overflow: auto; 
-    position: relative;
-	text-align: left;
-	font-family: 'Gochi Hand', cursive;
-	font-size: 26px;
-	z-index: 99;
-}
+
+
 /*================================================================*/
 /*================     Elementos         =========================*/
 /*================================================================*/
-#walksequence{ /*Hombre andando */
-	position: absolute;
-	bottom: 10%;
-	left:550px;
-	z-index: 20;
-}
 
 #mg1{ /*Hola soy Marco*/
 	position: absolute;
 	top:20%;
-	left:1000px;
+	left:14500px;
 	opacity: 0;	
+	z-index: 10;
 }
+#mg2{ /*Pergamino*/
+	position: absolute;
+	top:5%;
+	left:15000px;
+	opacity: 1;	
+	background-image: url("../img/pergamino.png");
+	background-size: 400px 350px;
+    background-repeat: no-repeat;
+	z-index: 10;    
+}
+
 /*Flecha*/
 #flecha{
 	position: absolute;
 	bottom: 75%;
-	left:2500px;
-	width: 0px;
+	left:12500px;
+	/*width: 0px;*/
+	transform: rotate(-90deg);
 	overflow: hidden;
+	z-index: 10;
 }
 #flecha_in{
 	position: relative;
 	margin: 5px;
+	z-index: 10;
 }
 /*Reloj ==================================*/
-#clock {
+#reloj{
 	position: absolute;
-	left: 2902px;
-	top: 80px;
+	left: 12902px;
+	top: -150px;
+	z-index: 10;
 }
 #saeta1 {
-	position: absolute;
-	left: 3000px;
-	top: 100px;
+	position: relative;
+	left: 97px;
+	top: -180px;
 	height: 80px;
 	width: 5px;
 	background-color: black;
 	animation: roll 5s linear infinite; /*ease, ease-in, ease-out*/
 	transform: rotate(30deg);
     transform-origin: 50% 100%;	
+	z-index: 10;
 }
 @keyframes roll {
   0% {
@@ -115,15 +406,16 @@
   }
 }
 #saeta2 {
-	position: absolute;
-	left: 3000px;
-	top: 120px;
+	position: relative;
+	left: 97px;
+	top: -240px;
 	height: 60px;
 	width: 5px;
 	background-color: black;
 	animation: roll2 50s linear infinite; /*ease, ease-in, ease-out*/
 	transform: rotate(30deg);
     transform-origin: 50% 100%;	
+	z-index: 10;
 }
 @keyframes roll2 {
   0% {
@@ -140,18 +432,106 @@
     40%, 60% { transform: rotate(90deg) }
     50% { transform: rotate(95deg); }
 }
-
 /* Fin reloj ===============================*/
+
+
+.rasca{
+	position: absolute;
+	left: 13000px;
+	top: 10%;
+	border: red solid 2px;
+	z-index: 10;
+}
+
+#piechart_3d{
+	position: absolute;
+	left: 12000px;
+	top:50px;
+	transform: rotate(-90deg);
+    transform-origin: 0% 0%;	
+	z-index: 10;
+}
+
+
+#graph2{
+	position: absolute;
+	left: 9500px;
+	top:100px;
+	opacity: 0.7
+	z-index: 10;
+}
+#graph2a{
+	top:100px;
+	height: 30px;
+	width: 100px;
+	background-color: red;
+	margin: 10px;
+	z-index: 10;
+}
+#graph2b{
+	top:200px;
+	height: 30px;
+	width: 100px;
+	background-color: green;
+	margin: 10px;
+	z-index: 10;
+}
+#graph2c{
+	top:300px;
+	height: 30px;
+	width: 100px;
+	background-color: blue;
+	margin: 10px;
+	z-index: 10;
+}
+#graph2d{
+	top:400px;
+	height: 30px;
+	width: 100px;
+	background-color: yellow;
+	margin: 10px;
+	z-index: 10;
+}
+/*bezier*/
+svg {
+  max-width: 100%;
+	z-index: 10;
+}
+
+.bezier {
+  width: 30px;
+  height: 30px;
+}
+
+.bezier svg {
+	position: absolute;
+  	left: 15500px;
+  	top: 50px;
+  	height: 30px;
+  	width: 30px;
+}
+.bezier svg > * {
+  fill: #86CC01;
+}
+/*end bezier*/
+
+#target_pajaro{
+	position: absolute;
+	left:9800px;
+	top:100px;
+	z-index: 10;
+}
+
 #casa{
 	position: absolute;
 	top: 40%;
-	left:3500px;
+	left:13500px;
 	z-index: 20;
 }
 #pop1{
 	position: absolute;
 	top: 400px;
-	left: 4500px;
+	left: 14500px;
 	opacity: 0;
 	z-index: 22;
 }
@@ -165,29 +545,33 @@
 	text-align: center;
 	font-family: Arial;
 	font-size: 30px;
+	z-index: 10;
 }
-
 
 #muneco{
 	position: absolute;
 	top: 50%;
-	left:2000px;
+	left:12500px;
+	z-index: 10;	
 }
 #coche{
 	position: absolute;
 	bottom: 10%;
 	left:8500px;
+	z-index: 10;	
 }
 #plane{
 	position: absolute;
 	bottom: 30%;
 	left:8000px;
 	overflow: hidden;
+	z-index: 10;
 }
 #writing{
 	position: absolute;
-	bottom: 30%;
-	left:8500px;
+	top: 30%;
+	left:10500px;
+	z-index: 10;
 }
 #propiedades{
 	position: absolute;
@@ -197,6 +581,7 @@
 	font-family: Arial;
 	font-size: 55px;
 	opacity: 0;
+	z-index: 10;
 }
 #propiedades .items{
 	color: black;
@@ -209,9 +594,11 @@
 	left:8000px;
 	overflow: hidden;
 	opacity: .8;
+	z-index: 10;
 }
 .boxg{
 	opacity: 0;
+	z-index: 10;
 }
 #Layer_1{
 	position: relative;
@@ -221,7 +608,7 @@
 /*Saludo*/
 .box_saludo{
 	position: absolute;
-	left:2300px;
+	left:12300px;
 	width: 700px;
 	height: 70px;
 	/*border: red solid 1px; /*Activa para ver fundionamiento del saludo*/
@@ -233,7 +620,7 @@
 	left: -340px;
 	width: 340px;
 	height: 100px;
-
+	z-index: 10;
 }
 .texto_saludo {
 	position: relative;
@@ -249,8 +636,9 @@
 #imagesequence{
 	position: absolute;
 	bottom: 10%;
-	left:3550px;
+	left:13550px;
 	z-index: 19;
+
 }
 
 
