@@ -76,6 +76,22 @@
 	color:white;
 	z-index: 100;
 }
+.label_tipo{
+	position: relative;
+	top:30px;
+	left:-30px;
+	width: auto;
+	height: auto;
+	border-radius: 20px;
+	font-size: 40px;
+	font-family: 'Gochi Hand', cursive;
+	text-align: center;
+	background-color: red;
+	color:white;
+	z-index: 100;
+
+}
+
 /*================================================================*/
 /*================     Section 0        =========================*/
 /*================================================================*/
@@ -222,152 +238,26 @@
 #txt04{
 	position: absolute;
 	top: 5%;
-	left: 2700px;
+	left: 2900px;
 	opacity: 0;
 }
 #farmer{
 	position: absolute;
-	left:4000px;
+	left:3700px;
 	bottom: 30%;
-	z-index: 21;
+	z-index: 19;
 }
 #txt05{
 	position: absolute;
 	top: 30%;
-	left: 3800px;
+	left: 3600px;
 	opacity: 0;
 }
-#txt06{
-	position: absolute;
-	top: 5%;
-	left: 4450px;
-	opacity: 0;
-}
-
-#pan{
-	position: absolute;
-	left:5200px;
-	top: 5%;
-	z-index: 21;
-	animation: pan 3s ease infinite;
-}
-@keyframes pan {
-    0% { left: 5200px; }
-    50% { left: 5300px; }
-    100% { left: 5200px; }
-
-}
-#txt07{
-	position: absolute;
-	top: 5%;
-	left: 5700px;
-	opacity: 0;
-}
-
-#barn2{
-	position: absolute;
-	left:6300px;
-	top:10%;
-	z-index: 0;
-}
-#tv2{
-	position: absolute;
-	top: 40px;
-	left:6705px;
-	opacity: 0;
-	z-index: 10;
-}
-#video{
-	position: absolute;
-	top: 64px;
-	left:6750px;
-	z-index: 10;
-}
-#txt08{
-	position: absolute;
-	top: 5%;
-	left: 6200px;
-	opacity: 0;
-	z-index: 10
-}
-
-
-
-
-
-#mountain{
-	position: absolute;
-	left:7200px;
-	bottom: 0px;
-	z-index: 20;
-}
-
-
-
-
-
-/*================================================================*/
-/*================     Section 2         =========================*/
-/*================================================================*/
-#parallaxContainer2 {
-	width: 7680px;
-	height: 100%;
-	top: 0px;
-	position: relative;
-}
-#parallaxContainer2 .layerb1 {
-	background-image: url("../img/forestc.png");
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0px;
-}
-#parallaxContainer2 .layerb2 {
-	background-image: url("../img/forestb.png");
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0px;
-}
-#parallaxContainer2 .layerb3 {
-	background-image: url("../img/foresta.png");
-	background-position: left bottom;
-	position: absolute;
-	background-repeat: repeat-x;
-	height: 100%;
-	width: 100%;
-	top: 0px;
-}
-
-
-
-/*================================================================*/
-/*================     Elementos         =========================*/
-/*================================================================*/
-
-#mg1{ /*Hola soy Marco*/
-	position: absolute;
-	top:20%;
-	left:14500px;
-	opacity: 0;	
-	z-index: 10;
-}
-#mg2{ /*Pergamino*/
-	position: absolute;
-	top:5%;
-	left:15000px;
-	opacity: 1;	
-	background-image: url("../img/pergamino.png");
-	background-size: 400px 350px;
-    background-repeat: no-repeat;
-	z-index: 10;    
-}
-
 /*Flecha*/
 #flecha{
 	position: absolute;
 	bottom: 75%;
-	left:12500px;
+	left:3650px;
 	/*width: 0px;*/
 	transform: rotate(-90deg);
 	overflow: hidden;
@@ -381,7 +271,7 @@
 /*Reloj ==================================*/
 #reloj{
 	position: absolute;
-	left: 12902px;
+	left: 4050px;
 	top: -150px;
 	z-index: 10;
 }
@@ -435,35 +325,138 @@
 /* Fin reloj ===============================*/
 
 
-.rasca{
+#txt06{
 	position: absolute;
-	left: 13000px;
-	top: 10%;
-	border: red solid 2px;
-	z-index: 10;
+	top: 5%;
+	left: 4200px;
+	opacity: 0;
+}
+
+#pan{
+	position: absolute;
+	left:4300px;
+	top: 5%;
+	z-index: 21;
+	animation: pan 3s ease infinite;
+}
+@keyframes pan {
+    0% { left: 4800px; }
+    50% { left: 4900px; }
+    100% { left: 4800px; }
+
 }
 
 #piechart_3d{
 	position: absolute;
-	left: 12000px;
+	left: 5100px;
 	top:50px;
 	transform: rotate(-90deg);
     transform-origin: 0% 0%;	
 	z-index: 10;
 }
 
+#txt07{
+	position: absolute;
+	top: 5%;
+	left: 5800px;
+	opacity: 0;
+}
 
+#barn2{
+	position: absolute;
+	left:6300px;
+	top:10%;
+	z-index: 0;
+}
+#tv2{
+	position: absolute;
+	top: 40px;
+	left:6705px;
+	opacity: 0;
+	z-index: 10;
+}
+#video{
+	position: absolute;
+	top: 64px;
+	left:6750px;
+	z-index: 10;
+}
+#txt08{
+	position: absolute;
+	top: 5%;
+	left: 6300px;
+	opacity: 0;
+	z-index: 10
+}
+#mountain{
+	position: absolute;
+	left:7200px;
+	bottom: 0px;
+	z-index: 20;
+}
+
+
+
+/*================================================================*/
+/*================     Section 2         =========================*/
+/*================================================================*/
+#parallaxContainer2 {
+	width: 5200px;
+	height: 100%;
+	top: 0px;
+	position: relative;
+}
+#parallaxContainer2 .layerb1 {
+	background-image: url("../img/forestc.png");
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+}
+#parallaxContainer2 .layerb2 {
+	background-image: url("../img/forestb.png");
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+}
+#parallaxContainer2 .layerb3 {
+	background-image: url("../img/foresta.png");
+	background-position: left bottom;
+	position: absolute;
+	background-repeat: repeat-x;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+}
+.tit03{
+	position: absolute;
+	left:7900px;
+	top:5%;
+}
+#txt09{
+	position: absolute;
+	top: 5%;
+	left: 8800px;
+	opacity: 0;
+}
+#susana{
+	position: absolute;
+	left:9200px;
+	top:30%;
+	opacity: 0;
+}
 #graph2{
 	position: absolute;
-	left: 9500px;
+	left: 9400px;
 	top:100px;
-	opacity: 0.7
+	opacity: 0;
 	z-index: 10;
 }
 #graph2a{
 	top:100px;
 	height: 30px;
-	width: 100px;
+	width: 0px;
 	background-color: red;
 	margin: 10px;
 	z-index: 10;
@@ -471,7 +464,7 @@
 #graph2b{
 	top:200px;
 	height: 30px;
-	width: 100px;
+	width: 0px;
 	background-color: green;
 	margin: 10px;
 	z-index: 10;
@@ -479,7 +472,7 @@
 #graph2c{
 	top:300px;
 	height: 30px;
-	width: 100px;
+	width: 0px;
 	background-color: blue;
 	margin: 10px;
 	z-index: 10;
@@ -487,11 +480,241 @@
 #graph2d{
 	top:400px;
 	height: 30px;
-	width: 100px;
+	width: 0px;
 	background-color: yellow;
 	margin: 10px;
 	z-index: 10;
 }
+#txt10{
+	position: absolute;
+	top: 5%;
+	left: 10000px;
+	opacity: 0;
+}
+#doctor{
+	position: absolute;
+	left:10400px;
+	top:30%;
+	opacity: 0;
+}
+#txt11{
+	position: absolute;
+	top: 5%;
+	left: 10800px;
+	opacity: 0;
+}
+#bike{
+	position: absolute;
+	left:10000px;
+	bottom:10%;
+	opacity: 0;
+}
+#txt12{
+	position: absolute;
+	top: 45%;
+	left: 11500px;
+	opacity: 0;
+	width: 130px;
+}
+#mountain2{
+	position: absolute;
+	left:12500px;
+	bottom: 0px;
+	z-index: 20;
+}
+
+
+/*================================================================*/
+/*================     Section 3      =========================*/
+/*================================================================*/
+#parallaxContainer3 {
+	width: 7680px;
+	height: 100%;
+	top: 0px;
+	position: relative;
+}
+#parallaxContainer3 .layerc1 {
+	background-image: url("../img/forestc.png");
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+}
+#parallaxContainer3 .layerc2 {
+	background-image: url("../img/forestb.png");
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+}
+#parallaxContainer3 .layerc3 {
+	background-image: url("../img/desert.png");
+	background-position: left bottom;
+	position: absolute;
+	background-repeat: repeat-x;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+}
+.tit04{
+	position: absolute;
+	left:13100px;
+	top:5%;
+}
+#txt13{
+	position: absolute;
+	top: 35%;
+	left: 13600px;
+	opacity: 0.1;
+	width: 130px;
+}
+#queso_serpiente{
+	position: absolute;
+	top: 40%;
+	left:14000px;
+	z-index: 12;	
+	opacity: 0;
+}
+
+#serpiente{
+	position: absolute;
+	top: 30%;
+	left:14200px;
+	z-index: 11;
+}
+#original{
+	position: absolute;
+	top: 5%;
+	left:14300px;
+	z-index: 12;	
+	opacity: 0;
+}
+#crema{
+	position: absolute;
+	top: 5%;
+	left:14700px;
+	z-index: 12;	
+	opacity: 0;
+}
+#rayado{
+	position: absolute;
+	top: 5%;
+	left:15100px;
+	z-index: 12;	
+	opacity: 0;
+}
+.tit05{
+	position: absolute;
+	left:15700px;
+	top:5%;
+}
+#aperitivo{
+	position: absolute;
+	top: -250px;
+	left:15900px;
+	z-index: 12;	
+}
+#carnequeso{
+	position: absolute;
+	top: -250px;
+	left:16300px;
+	z-index: 12;	
+}
+#convino{
+	position: absolute;
+	top: -250px;
+	left:16700px;
+	z-index: 12;	
+}
+#ensalada{
+	position: absolute;
+	top: -250px;
+	left:17100px;
+	z-index: 12;	
+}
+#pizza{
+	position: absolute;
+	top: -250px;
+	left:17500px;
+	z-index: 12;	
+}
+#sandwich{
+	position: absolute;
+	top: -250px;
+	left:17900px;
+	z-index: 12;	
+}
+#taco{
+	position: absolute;
+	top: -250px;
+	left:18300px;
+	z-index: 12;	
+}
+#txt14{
+	position: absolute;
+	top: 30%;
+	left: 18800px;
+	opacity: 0;
+}
+#rafa{
+	position: absolute;
+	top: 50%;
+	left:19200px;
+	z-index: 12;	
+}
+#txt15{
+	position: absolute;
+	top: 10%;
+	left: 19200px;
+	width: 300px;
+	opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================================================*/
+/*================     Elementos         =========================*/
+/*================================================================*/
+
+#mg1{ /*Hola soy Marco*/
+	position: absolute;
+	top:20%;
+	left:14500px;
+	opacity: 0;	
+	z-index: 10;
+	display: none;
+}
+#mg2{ /*Pergamino*/
+	position: absolute;
+	top:5%;
+	left:15000px;
+	opacity: 1;	
+	background-image: url("../img/pergamino.png");
+	background-size: 400px 350px;
+    background-repeat: no-repeat;
+	z-index: 10;    
+	display: none;
+}
+
+
+.rasca{
+	position: absolute;
+	left: 20000px;
+	top: 10%;
+	border: red solid 2px;
+	z-index: 10;
+	display: none;
+}
+
 /*bezier*/
 svg {
   max-width: 100%;
@@ -505,10 +728,11 @@ svg {
 
 .bezier svg {
 	position: absolute;
-  	left: 15500px;
+  	left: 20500px;
   	top: 50px;
   	height: 30px;
   	width: 30px;
+  	display: none;
 }
 .bezier svg > * {
   fill: #86CC01;
@@ -517,16 +741,52 @@ svg {
 
 #target_pajaro{
 	position: absolute;
-	left:9800px;
+	left:20900px;
 	top:100px;
 	z-index: 10;
+	display: none;
 }
+
+/*Red graph*/
+#propiedades{
+	position: absolute;
+	bottom: 56%;
+	left:18000px;	
+	padding-left: 20px;
+	font-family: Arial;
+	font-size: 55px;
+	opacity: 0;
+	z-index: 10;
+	display: none;
+}
+#propiedades .items{
+	color: black;
+	font-size: 30px;
+	line-height: 1.6;
+}
+#graph{
+	position: absolute;
+	bottom: 55%;
+	left:18000px;
+	overflow: hidden;
+	opacity: .8;
+	z-index: 10;
+	display: none;
+}
+/*end Red graph*/
+
+
+
+
+
+
 
 #casa{
 	position: absolute;
 	top: 40%;
 	left:13500px;
 	z-index: 20;
+	display: none;
 }
 #pop1{
 	position: absolute;
@@ -534,6 +794,7 @@ svg {
 	left: 14500px;
 	opacity: 0;
 	z-index: 22;
+	display: none;
 }
 .bocadillo{
 	width: 250px;
@@ -552,50 +813,26 @@ svg {
 	position: absolute;
 	top: 50%;
 	left:12500px;
-	z-index: 10;	
+	z-index: 10;
+	display: none;	
 }
 #coche{
 	position: absolute;
 	bottom: 10%;
-	left:8500px;
-	z-index: 10;	
+	left:14500px;
+	z-index: 10;
+	display: none;	
 }
 #plane{
 	position: absolute;
 	bottom: 30%;
-	left:8000px;
+	left:15000px;
 	overflow: hidden;
 	z-index: 10;
+	display: none;
 }
-#writing{
-	position: absolute;
-	top: 30%;
-	left:10500px;
-	z-index: 10;
-}
-#propiedades{
-	position: absolute;
-	bottom: 56%;
-	left:8000px;	
-	padding-left: 20px;
-	font-family: Arial;
-	font-size: 55px;
-	opacity: 0;
-	z-index: 10;
-}
-#propiedades .items{
-	color: black;
-	font-size: 30px;
-	line-height: 1.6;
-}
-#graph{
-	position: absolute;
-	bottom: 55%;
-	left:8000px;
-	overflow: hidden;
-	opacity: .8;
-	z-index: 10;
-}
+
+
 .boxg{
 	opacity: 0;
 	z-index: 10;
@@ -604,16 +841,16 @@ svg {
 	position: relative;
 	left:-175px;
 }
-
 /*Saludo*/
 .box_saludo{
 	position: absolute;
-	left:12300px;
+	left:16300px;
 	width: 700px;
 	height: 70px;
 	/*border: red solid 1px; /*Activa para ver fundionamiento del saludo*/
 	top: 40%;
 	overflow: hidden;
+	display: none;
 }
 #saludo{
 	position: relative;
@@ -632,12 +869,14 @@ svg {
 	padding: 20px;
 	border-radius: 20px;
 }
+
 /*Conejo*/
 #imagesequence{
 	position: absolute;
 	bottom: 10%;
 	left:13550px;
 	z-index: 19;
+	display: none;
 
 }
 

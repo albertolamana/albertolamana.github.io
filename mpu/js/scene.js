@@ -16,102 +16,6 @@ var scene1 = new ScrollMagic.Scene({triggerElement: "#parallaxContainer", offset
 	//.addIndicators({name: "paisaje"}) // add indicators (requires plugin)
 	.addTo(controller);
 
-// hola soy Gustavo
-var scene_txt03 = new ScrollMagic.Scene({triggerElement: "#txt03", offset: 200, duration: 300,})
-	.setTween("#txt03", 1, {opacity: 1,})
-	.setPin("#txt03") 
-	.addTo(controller)
-var scene_txt0b = new ScrollMagic.Scene({triggerElement: "#txt03", offset: 500, duration: 100,})
-	.setTween("#txt03", 1, {opacity: 0,})
-	.setPin("#txt03") 
-	.addTo(controller)
-
-//texto elaboracion 1
-var scene_txt04 = new ScrollMagic.Scene({triggerElement: "#txt04", offset: 200, duration: 300,})
-	.setTween("#txt04", 1, {opacity: 1,})
-	.setPin("#txt04") 
-	.addTo(controller)
-
-//buenos dias Ricardo
-var scene_txt05 = new ScrollMagic.Scene({triggerElement: "#txt05", offset: -100, duration: 300,})
-	.setTween("#txt05", 1, {opacity: 1,})
-	.setPin("#txt05") 
-	.addTo(controller)
-var scene_txt05b = new ScrollMagic.Scene({triggerElement: "#txt05", offset: 500, duration: 100,})
-	.setTween("#txt05", 1, {opacity: 0,})
-	.setPin("#txt05") 
-	.addTo(controller)
-
-//texto elaboracion 2
-var scene_txt06 = new ScrollMagic.Scene({triggerElement: "#txt06", offset: 200, duration: 300,})
-	.setTween("#txt06", 1, {opacity: 1,})
-	.setPin("#txt06") 
-	.addTo(controller)
-
-//texto elaboracion 3
-var scene_txt07 = new ScrollMagic.Scene({triggerElement: "#txt07", offset: 200, duration: 100,})
-	.setTween("#txt07", 1, {opacity: 1,})
-	.setPin("#txt07") 
-	.addTo(controller)
-
-//trigger video cuando el scroll sea mayor de 300
-var video1 = 0
-function green() {
-	if ($(window).scrollLeft()>6000 && video1 == 0){ //no permitas que se inicie cada vez que se mueva el cursor
-		//$('#video').css('top','0');
-		$('#video').html('<iframe width="400" height="290" src="https://www.youtube.com/embed/g6u-hGnCYsI?autoplay=1&loop=1&playlist=g6u-hGnCYsI" frameborder="0" allowfullscreen></iframe>');
-		$('#tv2').css({'opacity':'1', 'z-index':'0'});
-		video1 = 1
-	}
-}
-green();
-$(window).scroll(green);
-
-//vamos a ver un video
-var scene_txt08 = new ScrollMagic.Scene({triggerElement: "#txt08", offset: -100, duration: 300,})
-	.setTween("#txt08", 1, {opacity: 1,})
-	.setPin("#txt08") 
-	.addTo(controller)
-var scene_txt08b = new ScrollMagic.Scene({triggerElement: "#txt08", offset: 500, duration: 100,})
-	.setTween("#txt08", 1, {opacity: 0,})
-	.setPin("#txt08") 
-	.addTo(controller)
-
-
-
-
-
-//Parallax 2
-var tween_para2 = new TimelineMax ()
-	.add([
-	TweenMax.to("#parallaxContainer2 .layerb1", 1, {backgroundPosition: "-40% 0", ease: Linear.easeNone}),
-	TweenMax.to("#parallaxContainer2 .layerb2", 1, {backgroundPosition: "-125% 0", ease: Linear.easeNone}),
-	//TweenMax.to("#parallaxContainer .layer3", 1, {backgroundPosition: "-200% 100%", ease: Linear.easeNone})
-		]);
-// Animate parallax
-var scene1 = new ScrollMagic.Scene({triggerElement: "#parallaxContainer2", offset:-300, duration: 8500 })
-	.setTween(tween_para2)
-	//.setPin("#parallaxContainer")
-	//.addIndicators({name: "paisaje"}) // add indicators (requires plugin)
-	.addTo(controller);
-
-//draggable box
-$('#draggable').draggable(
-    {
-        drag: function(){
-            var offset = $(this).offset();
-            var xPos = offset.left;
-            var yPos = offset.top;
-            $('#posX').text('x: ' + xPos);
-            $('#posY').text('y: ' + yPos);
-            if (xPos > 300) {
-            	$('#draggable').draggable({ disabled: true }); 
-            	$('#draggable').css({'background-color':'green', 'border':'blue solid 4px', 'width':'300px'})
-            	$('#draggable').animate({top:50, left:100});
-        	}
-        }
-    });
-
 //primer hombre andando
 var imgwalk = [
 	"img/walk23.png",
@@ -154,11 +58,354 @@ var imgwalk = [
 		}
 	);
 	// build scene
-	var scene_manwalk = new ScrollMagic.Scene({triggerElement: "#walksequence", offset: 300, duration: 8000})
+	var scene_manwalk = new ScrollMagic.Scene({triggerElement: "#walksequence", offset: 300, duration: 21000})
 		.setTween(manwalk)
 		.setPin("#walksequence")
 		.addIndicators({name: "manwalk"}) // add indicators (requires plugin)
 		.addTo(controller);
+
+// hola soy Gustavo
+var scene_txt03 = new ScrollMagic.Scene({triggerElement: "#txt03", offset: 200, duration: 300,})
+	.setTween("#txt03", 1, {opacity: 1,})
+	.setPin("#txt03") 
+	.addTo(controller)
+var scene_txt0b = new ScrollMagic.Scene({triggerElement: "#txt03", offset: 500, duration: 100,})
+	.setTween("#txt03", 1, {opacity: 0,})
+	.setPin("#txt03") 
+	.addTo(controller)
+
+//texto elaboracion 1
+var scene_txt04 = new ScrollMagic.Scene({triggerElement: "#txt04", offset: 200, duration: 300,})
+	.setTween("#txt04", 1, {opacity: 1,})
+	//.setPin("#txt04") 
+	.addTo(controller)
+
+//buenos dias Ricardo
+var scene_txt05 = new ScrollMagic.Scene({triggerElement: "#txt05", offset: -0, duration: 300,})
+	.setTween("#txt05", 1, {opacity: 1,})
+	//.setPin("#txt05") 
+	.addTo(controller)
+var scene_txt05b = new ScrollMagic.Scene({triggerElement: "#txt05", offset: 500, duration: 100,})
+	.setTween("#txt05", 1, {opacity: 0,})
+	//.setPin("#txt05") 
+	.addTo(controller)
+
+//flecha
+var scene_flecha = new ScrollMagic.Scene({triggerElement: "#flecha", offset:-200, duration: 500, tweenChanges: true})
+	.setTween('#flecha', .5, {rotation: 0, scaleX:1})
+	.addTo(controller);	
+//reloj
+var scene_reloj = new ScrollMagic.Scene({triggerElement: "#reloj", offset:-400, duration: 500, tweenChanges: true})
+	.setTween('#reloj', .5, {top: 70, scaleX:1})
+	.addIndicators({name: "reloj"}) // add indicators (requires plugin)
+	.addTo(controller);	
+
+//texto elaboracion 2
+var scene_txt06 = new ScrollMagic.Scene({triggerElement: "#txt06", offset: 200, duration: 300,})
+	.setTween("#txt06", 1, {opacity: 1,})
+	.setPin("#txt06") 
+	.addTo(controller)
+
+//=============================================================
+//=======	Google graphs 						===============
+//=============================================================
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Fementación', 3],
+          ['Sedimentación', 2],
+          ['Desidratación', 2],
+          ['Solidificación', 2],
+        ]);
+
+        var options = {
+          title: 'Distribución del tiempo de elaboración (días)',
+      	  titleTextStyle:{fontSize:24},
+          //is3D: true,
+          backgroundColor: 'transparent',
+          slices: {
+            0: {color: '#2D8146'}, //transparent
+            1: {color: '#2E4A73'},
+            2: {color: '#AE843C'},
+            3: {color: '#AE4C3C'},
+          }
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+
+//piechart
+var scene_piechart = new ScrollMagic.Scene({triggerElement: "#piechart_3d", offset:0, duration: 500, tweenChanges: true})
+	.setTween('#piechart_3d', 2, {rotation: 0, scaleX:1})
+	.addTo(controller);	
+
+//texto elaboracion 3
+var scene_txt07 = new ScrollMagic.Scene({triggerElement: "#txt07", offset: 200, duration: 100,})
+	.setTween("#txt07", 1, {opacity: 1,})
+	.setPin("#txt07") 
+	.addTo(controller)
+
+//trigger video cuando el scroll sea mayor de 300
+var video1 = 0
+function green() {
+	if ($(window).scrollLeft()>6000 && video1 == 0){ //no permitas que se inicie cada vez que se mueva el cursor
+		//$('#video').css('top','0');
+		$('#video').html('<iframe width="400" height="290" src="https://www.youtube.com/embed/g6u-hGnCYsI?autoplay=1&loop=1&playlist=g6u-hGnCYsI" frameborder="0" allowfullscreen></iframe>');
+		$('#tv2').css({'opacity':'1', 'z-index':'0'});
+		video1 = 1
+	}
+}
+green();
+$(window).scroll(green);
+
+//vamos a ver un video
+var scene_txt08 = new ScrollMagic.Scene({triggerElement: "#txt08", offset: -100, duration: 300,})
+	.setTween("#txt08", 1, {opacity: 1,})
+	//.setPin("#txt08") 
+	.addTo(controller)
+var scene_txt08b = new ScrollMagic.Scene({triggerElement: "#txt08", offset: 500, duration: 100,})
+	.setTween("#txt08", 1, {opacity: 0,})
+	//.setPin("#txt08") 
+	.addTo(controller)
+
+//Parallax 2
+var tween_para2 = new TimelineMax ()
+	.add([
+	TweenMax.to("#parallaxContainer2 .layerb1", 1, {backgroundPosition: "-40% 0", ease: Linear.easeNone}),
+	TweenMax.to("#parallaxContainer2 .layerb2", 1, {backgroundPosition: "-125% 0", ease: Linear.easeNone}),
+	//TweenMax.to("#parallaxContainer .layer3", 1, {backgroundPosition: "-200% 100%", ease: Linear.easeNone})
+		]);
+// Animate parallax
+var scene1 = new ScrollMagic.Scene({triggerElement: "#parallaxContainer2", offset:-300, duration: 8500 })
+	.setTween(tween_para2)
+	//.setPin("#parallaxContainer")
+	//.addIndicators({name: "paisaje"}) // add indicators (requires plugin)
+	.addTo(controller);
+
+//texto propiedades 1
+var scene_txt09 = new ScrollMagic.Scene({triggerElement: "#txt09", offset: 200, duration: 300,})
+	.setTween("#txt09", 1, {opacity: 1,})
+	//.setPin("#txt09") 
+	.addTo(controller)
+
+//trigger barchar cuando el scroll sea mayor de 9500
+var bc1 = 0
+
+function barchar() {
+	if ($(window).scrollLeft()>8500 && $(window).scrollLeft()<9000 && bc1 == 0){ //no permitas que se inicie cada vez que se mueva el cursor
+		//$('#video').css('top','0');
+		$('#graph2a').animate({'width':'400'}, 1000);
+		$('#graph2b').animate({'width':'500'}, 1000);
+		$('#graph2c').animate({'width':'300'}, 1000);
+		$('#graph2d').animate({'width':'200'}, 1000);		
+		$('#graph2, #susana').animate({'opacity':'1'}, 1000);
+		bc1 = 1
+	}
+	if (bc1 == 1 && ($(window).scrollLeft()>9500 || $(window).scrollLeft()<8500))
+	{ //no permitas que se inicie cada vez que se mueva el cursor
+		//$('#video').css('top','0');
+		$('#graph2a').animate({'width':'0'}, 1000);
+		$('#graph2b').animate({'width':'0'}, 1000);
+		$('#graph2c').animate({'width':'0'}, 1000);
+		$('#graph2d').animate({'width':'0'}, 1000);	
+		$('#graph2, #susana').animate({'opacity':'0'}, 1000);	
+		bc1 = 0
+	}
+}
+barchar();
+$(window).scroll(barchar);
+
+//texto propiedades 2
+var scene_txt10 = new ScrollMagic.Scene({triggerElement: "#txt10", offset: 200, duration: 300,})
+	.setTween("#txt10, #doctor", 1, {opacity: 1,})
+	//.setPin("#txt10") 
+	.addTo(controller)
+
+//texto propiedades 3
+var scene_txt11 = new ScrollMagic.Scene({triggerElement: "#txt11", offset: 200, duration: 300,})
+	.setTween("#txt11", 1, {opacity: 1,})
+	//.setPin("#txt11") 
+	.addTo(controller)
+
+//bike
+var scene_bike = new ScrollMagic.Scene({triggerElement: "#bike", offset:1000, duration:1})
+	.setTween("#bike", 0.1, {opacity:1})
+	.setPin("#bike")
+	.addTo(controller)
+var scene_bike2 = new ScrollMagic.Scene({triggerElement: "#bike", offset:1000, duration:2000})
+	.setTween("#bike", 1, {x:5000})
+	.setPin("#bike")
+	.addTo(controller)
+
+// saludo bike
+var scene_txt12 = new ScrollMagic.Scene({triggerElement: "#txt12", offset: 200, duration: 300,})
+	.setTween("#txt12", 1, {opacity: 1,})
+	.setPin("#txt12") 
+	.addTo(controller)
+var scene_txt12b = new ScrollMagic.Scene({triggerElement: "#txt12", offset: 500, duration: 100,})
+	.setTween("#txt12", 1, {opacity: 0,})
+	.setPin("#txt12") 
+	.addTo(controller)
+
+//Parallax 3
+var tween_para3 = new TimelineMax ()
+	.add([
+	TweenMax.to("#parallaxContainer3 .layerc1", 1, {backgroundPosition: "-40% 0", ease: Linear.easeNone}),
+	TweenMax.to("#parallaxContainer3 .layerc2", 1, {backgroundPosition: "-125% 0", ease: Linear.easeNone}),
+	//TweenMax.to("#parallaxContainer .layer3", 1, {backgroundPosition: "-200% 100%", ease: Linear.easeNone})
+		]);
+// Animate parallax
+var scene_para3 = new ScrollMagic.Scene({triggerElement: "#parallaxContainer3", offset:-300, duration: 8500 })
+	.setTween(tween_para3)
+	//.setPin("#parallaxContainer")
+	//.addIndicators({name: "paisaje"}) // add indicators (requires plugin)
+	.addTo(controller);
+
+//puedes disfrutar...
+var scene_txt13 = new ScrollMagic.Scene({triggerElement: "#txt13", offset: 0, duration: 300,})
+	.setTween("#txt13", 1, {opacity: 1,})
+	//.setPin("#txt11") 
+	.addTo(controller)
+
+var scene_que_serpiente = new ScrollMagic.Scene({triggerElement: "#queso_serpiente", offset: 0, duration: 100,})
+	.setTween("#queso_serpiente", 1, {opacity: 1,})
+	//.setPin("#txt11") 
+	.addTo(controller)
+
+//serpiente
+function pathPrepare ($el) {
+	var lineLength = $el[0].getTotalLength();
+	$el.css("stroke-dasharray", lineLength);
+	$el.css("stroke-dashoffset", lineLength);
+	console.log(lineLength);
+	}
+	var $word = $("path#lineAB");	
+	pathPrepare($word);
+	var tween_write = new TimelineMax()
+		.add(TweenMax.to($word, 2, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
+	var scene_write = new ScrollMagic.Scene({triggerElement: "#serpiente", duration: 300, tweenChanges: true})
+		.setTween(tween_write)
+		.addTo(controller);		
+
+	var $word = $("path#lineCD");	
+	pathPrepare($word);
+	var tween_write = new TimelineMax()
+		.add(TweenMax.to($word, 5, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
+	var scene_write = new ScrollMagic.Scene({triggerElement: "#serpiente", duration: 400, tweenChanges: true})
+		.setTween(tween_write)
+		.addIndicators({name: "write"}) // add indicators (requires plugin)
+		.addTo(controller);		
+
+	var $word = $("path#lineEF");	
+	pathPrepare($word);
+	var tween_write = new TimelineMax()
+		.add(TweenMax.to($word, 6, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
+	var scene_write = new ScrollMagic.Scene({triggerElement: "#serpiente", duration: 500, tweenChanges: true})
+		.setTween(tween_write)
+		.addIndicators({name: "write"}) // add indicators (requires plugin)
+		.addTo(controller);	
+
+var scene_original = new ScrollMagic.Scene({triggerElement: "#original", offset: 100, duration: 300,})
+	.setTween("#original", 1, {opacity: 1,})
+	//.setPin("#txt11") 
+	.addTo(controller)
+
+var scene_crema = new ScrollMagic.Scene({triggerElement: "#crema", offset: 100, duration: 300,})
+	.setTween("#crema", 1, {opacity: 1,})
+	//.setPin("#txt11") 
+	.addTo(controller)
+
+var scene_rayado = new ScrollMagic.Scene({triggerElement: "#rayado", offset: 100, duration: 300,})
+	.setTween("#rayado", 1, {opacity: 1,})
+	//.setPin("#txt11") 
+	.addTo(controller)
+
+//platos cayendo
+var scene_aperitivo = new ScrollMagic.Scene({triggerElement: "#aperitivo", offset:-400, duration: 500, tweenChanges: true})
+	.setTween('#aperitivo', .5, {top: 300, scale:1.4})
+	.addTo(controller);	
+var scene_carnequeso = new ScrollMagic.Scene({triggerElement: "#carnequeso", offset:-400, duration: 500, tweenChanges: true})
+	.setTween('#carnequeso', .5, {top: 300, scale:1.5})
+	.addTo(controller);	
+var scene_convino = new ScrollMagic.Scene({triggerElement: "#convino", offset:-400, duration: 500, tweenChanges: true})
+	.setTween('#convino', .5, {top: 300, scale:1.5})
+	.addTo(controller);	
+var scene_ensalada = new ScrollMagic.Scene({triggerElement: "#ensalada", offset:-400, duration: 500, tweenChanges: true})
+	.setTween('#ensalada', .5, {top: 300, scale:1.5})
+	.addTo(controller);
+var scene_pizza = new ScrollMagic.Scene({triggerElement: "#pizza", offset:-400, duration: 500, tweenChanges: true})
+	.setTween('#pizza', .5, {top: 300, scale:1.5})
+	.addTo(controller);	
+var scene_sandwich = new ScrollMagic.Scene({triggerElement: "#sandwich", offset:-400, duration: 500, tweenChanges: true})
+	.setTween('#sandwich', .5, {top: 300, scale:1.5})
+	.addTo(controller);	
+var scene_taco = new ScrollMagic.Scene({triggerElement: "#taco", offset:-400, duration: 500, tweenChanges: true})
+	.setTween('#taco', .5, {top: 300, scale:1.5})
+	.addTo(controller);
+
+// Hola Rafa
+var scene_txt14 = new ScrollMagic.Scene({triggerElement: "#txt14", offset: 200, duration: 300,})
+	.setTween("#txt14", 1, {opacity: 1,})
+	//.setPin("#txt14") 
+	.addTo(controller)
+var scene_txt14b = new ScrollMagic.Scene({triggerElement: "#txt14", offset: 500, duration: 100,})
+	.setTween("#txt14", 1, {opacity: 0,})
+	//.setPin("#txt14") 
+	.addTo(controller)
+
+// Mensaje rafa
+var scene_txt15 = new ScrollMagic.Scene({triggerElement: "#txt15", offset: 0, duration: 300,})
+	.setTween("#txt15", 1, {opacity: 1,})
+	//.setPin("#txt15") 
+	.addTo(controller)
+var scene_txt15b = new ScrollMagic.Scene({triggerElement: "#txt15", offset: 500, duration: 100,})
+	.setTween("#txt15", 1, {opacity: 0,})
+	//.setPin("#txt15") 
+	.addTo(controller)
+
+
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+//draggable box
+$('#draggable').draggable(
+    {
+        drag: function(){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+            if (xPos > 300) {
+            	$('#draggable').draggable({ disabled: true }); 
+            	$('#draggable').css({'background-color':'green', 'border':'blue solid 4px', 'width':'300px'})
+            	$('#draggable').animate({top:50, left:100});
+        	}
+        }
+    });
+
+
 
 //conejo, hombre andando
  var images = [
@@ -202,41 +449,13 @@ var scene_mg1b = new ScrollMagic.Scene({triggerElement:'#mg1', offset: 1200, dur
  	.addTo(controller)
  	.addIndicators({name: "2"});	
 
-//flecha
-var scene_flecha = new ScrollMagic.Scene({triggerElement: "#flecha", offset:-200, duration: 500, tweenChanges: true})
-	.setTween('#flecha', .5, {rotation: 0, scaleX:1})
-	.addTo(controller);	
-//reloj
-var scene_reloj = new ScrollMagic.Scene({triggerElement: "#reloj", offset:-400, duration: 500, tweenChanges: true})
-	.setTween('#reloj', .5, {top: 70, scaleX:1})
-	.addIndicators({name: "reloj"}) // add indicators (requires plugin)
-	.addTo(controller);	
 
 
 
-//trigger barchar cuando el scroll sea mayor de 9500
-var bc1 = 0
 
-function barchar() {
-	if ($(window).scrollLeft()>8500 && $(window).scrollLeft()<9500 && bc1 == 0){ //no permitas que se inicie cada vez que se mueva el cursor
-		//$('#video').css('top','0');
-		$('#graph2a').animate({'width':'400'}, 1000);
-		$('#graph2b').animate({'width':'500'}, 1000);
-		$('#graph2c').animate({'width':'300'}, 1000);
-		$('#graph2d').animate({'width':'200'}, 1000);		
-		bc1 = 1
-	}
-	if ($(window).scrollLeft()>9500 && bc1 == 1){ //no permitas que se inicie cada vez que se mueva el cursor
-		//$('#video').css('top','0');
-		$('#graph2a').animate({'width':'0'}, 1000);
-		$('#graph2b').animate({'width':'0'}, 1000);
-		$('#graph2c').animate({'width':'0'}, 1000);
-		$('#graph2d').animate({'width':'0'}, 1000);		
-		bc1 = 0
-	}
-}
-barchar();
-$(window).scroll(barchar);
+
+
+
 
 //bezier
 var tl = new TimelineMax({
@@ -283,11 +502,6 @@ var scene_pajaro = new ScrollMagic.Scene({triggerElement: "#target_pajaro", dura
 	.setTween(tween_flight)
 	.addTo(controller);
 
-//piechart
-piechart_3d
-var scene_piechart = new ScrollMagic.Scene({triggerElement: "#piechart_3d", offset:-200, duration: 500, tweenChanges: true})
-	.setTween('#piechart_3d', .5, {rotation: 0, scaleX:1})
-	.addTo(controller);	
 
 //casa, solo escena, set pin es lo más importante
 var scene_casa = new ScrollMagic.Scene({triggerElement:'#casa',	offset: -50,duration: 3500})
@@ -337,63 +551,32 @@ var scene_coche = new ScrollMagic.Scene({triggerElement: "#coche", offset:-50, d
 	.addIndicators({name: "coche"}) // add indicators (requires plugin)
 
 //saludo
-var scene_saludo = new ScrollMagic.Scene({triggerElement: "#saludo", offset: 100, duration:1100})
-	.setPin("#saludo") 
-	.addTo(controller)
-	.addIndicators({name: "saludo"})
+//var scene_saludo = new ScrollMagic.Scene({triggerElement: "#saludo", offset: 100, duration:1100})
+//	.setPin("#saludo") 
+//	.addTo(controller)
+//	.addIndicators({name: "saludo"})
 
 //plane
-var scene_plane = new ScrollMagic.Scene({triggerElement: "#plane", offset:0, duration:8000})
-	.setTween("#plane", 1, {scale: 50, x:800, y:-800})
-	.setPin("#plane")
-	.addTo(controller)
-	.addIndicators({name: "plane"})
+//var scene_plane = new ScrollMagic.Scene({triggerElement: "#plane", offset:0, duration:8000})
+//	.setTween("#plane", 1, {scale: 50, x:800, y:-800})
+//	.setPin("#plane")
+//	.addTo(controller)
+//	.addIndicators({name: "plane"})
 
-//writing
-function pathPrepare ($el) {
-	var lineLength = $el[0].getTotalLength();
-	$el.css("stroke-dasharray", lineLength);
-	$el.css("stroke-dashoffset", lineLength);
-	console.log(lineLength);
-	}
-	var $word = $("path#lineAB");	
-	pathPrepare($word);
-	var tween_write = new TimelineMax()
-		.add(TweenMax.to($word, 2, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
-	var scene_write = new ScrollMagic.Scene({triggerElement: "#writing", duration: 300, tweenChanges: true})
-		.setTween(tween_write)
-		.addTo(controller);		
 
-	var $word = $("path#lineCD");	
-	pathPrepare($word);
-	var tween_write = new TimelineMax()
-		.add(TweenMax.to($word, 2, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
-	var scene_write = new ScrollMagic.Scene({triggerElement: "#writing", duration: 300, tweenChanges: true})
-		.setTween(tween_write)
-		.addIndicators({name: "write"}) // add indicators (requires plugin)
-		.addTo(controller);		
-
-	var $word = $("path#lineEF");	
-	pathPrepare($word);
-	var tween_write = new TimelineMax()
-		.add(TweenMax.to($word, 2, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
-	var scene_write = new ScrollMagic.Scene({triggerElement: "#writing", duration: 300, tweenChanges: true})
-		.setTween(tween_write)
-		.addIndicators({name: "write"}) // add indicators (requires plugin)
-		.addTo(controller);	
 
 
 //graph http://greensock.com/svg-tips
-var scene_graph = new ScrollMagic.Scene({triggerElement: "#graph", duration: 800, tweenChanges: true})
-	.setTween('.boxg', 1, {x:10, scaleX:4, rotation:0, opacity:1, fill:"#ff0000"})
-	.setPin('#graph')
-	.addIndicators({name: "g"}) // add indicators (requires plugin)
-	.addTo(controller);	
+//var scene_graph = new ScrollMagic.Scene({triggerElement: "#graph", duration: 800, tweenChanges: true})
+//	.setTween('.boxg', 1, {x:10, scaleX:4, rotation:0, opacity:1, fill:"#ff0000"})
+//	.setPin('#graph')
+//	.addIndicators({name: "g"}) // add indicators (requires plugin)
+//	.addTo(controller);	
 //graph title
-var scene_graph_title = new ScrollMagic.Scene({triggerElement: "#propiedades", duration: 800, tweenChanges: true})
-	.setTween('#propiedades', 1, {opacity:1})
-	.setPin('#propiedades')
-	.addTo(controller);	
+//var scene_graph_title = new ScrollMagic.Scene({triggerElement: "#propiedades", duration: 800, tweenChanges: true})
+//	.setTween('#propiedades', 1, {opacity:1})
+//	.setPin('#propiedades')
+//	.addTo(controller);	
 
 
 //caja de verde a naranja
@@ -462,37 +645,7 @@ function show() {
 show();
 $(window).scroll(show);
 
-//=============================================================
-//=======	Google graphs 						===============
-//=============================================================
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Fementación', 3],
-          ['Sedimentación', 2],
-          ['Desidratación', 2],
-          ['Solidificación', 2],
-          ['Sustentación', 7]
-        ]);
 
-        var options = {
-          title: 'Distribución del tiempo de elaboración (días)',
-          is3D: true,
-          backgroundColor: 'transparent',
-          slices: {
-            0: {color: '#00ff00'}, //transparent
-            1: {color: '#ff0000'},
-            2: {color: '#0000ff'},
-            3: {color: '#00ffff'},
-            4: {color: '#ffff00'},
-          }
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        chart.draw(data, options);
-      }
 
 
 
