@@ -358,11 +358,12 @@ h1.badge.velocity:after {
 form.move {
 	text-align: left;
 	position: fixed;
-	top: 50%;
-	left: 20px;
+	top: 20px;
+	right: 20px;
 	display: block;
+	width: 100px;
 	background-color: white;
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: rgba(255, 255, 255, 0.7);
 	border-radius: 4px;
 	padding: 20px;
 	z-index: 20;
@@ -437,7 +438,7 @@ form fieldset legend {
 	cursor: move;
 }
 .move * {
-	cursor: auto;
+	cursor: pointer;
 }
 .move label {
 	cursor: default;
