@@ -434,236 +434,243 @@ var scene_bikerotate = new ScrollMagic.Scene({triggerElement: "#txt17", offset:2
 
 
 //draggable box
-$('#draggable').draggable(
-    {
-        drag: function(){
-            var offset = $(this).offset();
-            var xPos = offset.left;
-            var yPos = offset.top;
-            $('#posX').text('x: ' + xPos);
-            $('#posY').text('y: ' + yPos);
-            if (xPos > 300) {
-            	$('#draggable').draggable({ disabled: true }); 
-            	$('#draggable').css({'background-color':'green', 'border':'blue solid 4px', 'width':'300px'})
-            	$('#draggable').animate({top:50, left:100});
-        	}
-        }
-    });
+// $('#draggable').draggable(
+//     {
+//         drag: function(){
+//             var offset = $(this).offset();
+//             var xPos = offset.left;
+//             var yPos = offset.top;
+//             $('#posX').text('x: ' + xPos);
+//             $('#posY').text('y: ' + yPos);
+//             if (xPos > 300) {
+//             	$('#draggable').draggable({ disabled: true }); 
+//             	$('#draggable').css({'background-color':'green', 'border':'blue solid 4px', 'width':'300px'})
+//             	$('#draggable').animate({top:50, left:100});
+//         	}
+//         }
+//     });
 
 
 
-//conejo, hombre andando
- var images = [
- 	"img/man1.png",
- 	"img/man2.png",
- 	"img/man3.png",
- 	"img/man4.png",
- 	"img/man5.png"
- 	];
-// 	// TweenMax can tween any property of any object. We use this object to cycle through the array
-// 	// create tween
- 	var obj2 = {curImg: 0};
- 	var conejo = TweenMax.to(obj2, 0.2, 
- 		{
- 		curImg: images.length - 1,	// animate propery curImg to number of images
- 		roundProps: "curImg",				// only integers so it can be used as an array index
- 		repeat: 20,									// repeat 3 times
- 		immediateRender: true,			// load first image automatically
- 		ease: Linear.easeNone,			// show every image the same ammount of time
- 		onUpdate: function () {
- 		  $("#conejo").attr("src", images[obj2.curImg]); // set the image source
- 			}
- 		}
- 	);
-// 	// build scene
- 	var scene_conejo = new ScrollMagic.Scene({triggerElement: "#imagesequence", offset:-200, duration: 8000})
- 		.setTween(conejo)
- 		.setPin("#imagesequence")
- 		.addIndicators({name: "conejo"}) // add indicators (requires plugin)
- 		.addTo(controller);
+// //conejo, hombre andando
+//  var images = [
+//  	"img/man1.png",
+//  	"img/man2.png",
+//  	"img/man3.png",
+//  	"img/man4.png",
+//  	"img/man5.png"
+//  	];
+// // 	// TweenMax can tween any property of any object. We use this object to cycle through the array
+// // 	// create tween
+//  	var obj2 = {curImg: 0};
+//  	var conejo = TweenMax.to(obj2, 0.2, 
+//  		{
+//  		curImg: images.length - 1,	// animate propery curImg to number of images
+//  		roundProps: "curImg",				// only integers so it can be used as an array index
+//  		repeat: 20,									// repeat 3 times
+//  		immediateRender: true,			// load first image automatically
+//  		ease: Linear.easeNone,			// show every image the same ammount of time
+//  		onUpdate: function () {
+//  		  $("#conejo").attr("src", images[obj2.curImg]); // set the image source
+//  			}
+//  		}
+//  	);
+// // 	// build scene
+//  	var scene_conejo = new ScrollMagic.Scene({triggerElement: "#imagesequence", offset:-200, duration: 8000})
+//  		.setTween(conejo)
+//  		.setPin("#imagesequence")
+//  		.addIndicators({name: "conejo"}) // add indicators (requires plugin)
+//  		.addTo(controller);
 
-//mensaje 1
-var scene_mg1a = new ScrollMagic.Scene({triggerElement:'#mg1', offset: -50, duration: 1000})
-	.setTween("#mg1", 100, {opacity: 1})
-	.setPin('#mg1')
- 	.addTo(controller)
-	.addIndicators({name: "1"});
-var scene_mg1b = new ScrollMagic.Scene({triggerElement:'#mg1', offset: 1200, duration: 300})
-	.setTween("#mg1", 1, {opacity: 0})
-	.setPin('#mg1')
- 	.addTo(controller)
- 	.addIndicators({name: "2"});	
-
-
-
-
+// //mensaje 1
+// var scene_mg1a = new ScrollMagic.Scene({triggerElement:'#mg1', offset: -50, duration: 1000})
+// 	.setTween("#mg1", 100, {opacity: 1})
+// 	.setPin('#mg1')
+//  	.addTo(controller)
+// 	.addIndicators({name: "1"});
+// var scene_mg1b = new ScrollMagic.Scene({triggerElement:'#mg1', offset: 1200, duration: 300})
+// 	.setTween("#mg1", 1, {opacity: 0})
+// 	.setPin('#mg1')
+//  	.addTo(controller)
+//  	.addIndicators({name: "2"});	
 
 
 
 
 
-//bezier
-var tl = new TimelineMax({
-  repeat: -1,
-  yoyo: true
-});
-var bezier_path = [	{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 150 }, { x: 200, y: 150 },
-					{ x: 300, y: 200 }, { x: 300, y: 0 }, { x: 0, y: 0 }];
-
-tl.staggerTo($('.bezier > svg'), 5, { bezier: {
-  type: 'thru',
-  values: bezier_path,
-  curviness: 0.5
-}, ease: Power1.easeInOut }, 0.0222);
-
-//volando
-var flightpath = {	
-		entry : {	curviness: 2, autoRotate: true, values: [
-											 {x: 0, y: 0 }, 
-											 { x: 100, y: 0 }, 
-											 { x: 100, y: 150 }, 
-											 { x: 200, y: 150 }]},
-		looping : {	curviness: 1.25, autoRotate: true,	values: [
-											{x: 510,	y: 60},
-											{x: 620,	y: -60},
-											{x: 500,	y: -100},
-											{x: 380,	y: 20},
-											{x: 500,	y: 60},
-											{x: 580,	y: 20},
-											{x: 620,	y: 15}]},
-		leave : {curviness: 1.25, autoRotate: true,	values: [
-											{x: 660,	y: 20},
-											{x: 800,	y: 130},
-											{x: $(window).width() + 300,	y: -100},]}};
-
-
-//var flightpath =[{ x: 200, y: 1000 }, { x: 100, y: 0 }, { x: 100, y: 150 }, { x: 200, y: 150 }];
-var tween_flight = new TimelineMax()
-	.add(TweenMax.to($("#pajaro"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
-	//.add(TweenMax.to($("#pajaro"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
-	//.add(TweenMax.to($("#pajaro"), 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
-var scene_pajaro = new ScrollMagic.Scene({triggerElement: "#target_pajaro", duration: 1000, offset: 100})
-	.setPin("#target_pajaro")
-	.setTween(tween_flight)
-	.addTo(controller);
-
-
-//casa, solo escena, set pin es lo más importante
-var scene_casa = new ScrollMagic.Scene({triggerElement:'#casa',	offset: -50,duration: 3500})
-	.setPin('#casa')
- 	.addTo(controller)
-	.addIndicators({name: "casa"});
-
-//pop
-var pop1 = new TweenMax.to('#pop1', .5, {opacity:1});
-var scene_pop = new ScrollMagic.Scene({triggerElement:'#pop1', offset:0, duration:20,})
-	.setTween(pop1)
- 	.addTo(controller)
-	.addIndicators({name: "pop"});
-var scene_pop2 = new ScrollMagic.Scene({triggerElement: "#pop1", offset: 100,  duration: 1500})
-	.setPin("#pop1")
-	.addIndicators({name: "pop fijo"}) // add indicators (requires plugin)
-	.addTo(controller);
-var pop1b = new TweenMax.to('#pop1', .5, {opacity:0});
-var scene_pop3 = new ScrollMagic.Scene({triggerElement:'#pop1', offset:1600, duration:200,})
-	.setTween(pop1b)
- 	.addTo(controller)
-	.addIndicators({name: "popb"});
-
-// Create tween muñeco
-var mun = new TweenMax.fromTo('#muneco', .5, 
-	{scale: .05, rotation: -10, top: 0},
-   	{scale: 1, rotation: 0, top: 50});
-var scene_mun = new ScrollMagic.Scene({triggerElement:'#muneco', offset:0, duration:300,})
-	.setTween(mun)
- 	.addTo(controller)
-	.addIndicators({name: "mun"});
-var scene_num2 = new ScrollMagic.Scene({triggerElement: "#muneco", offset: 300,  duration: 4200})
-	.setPin("#muneco")
-	.addIndicators({name: "mun fijo"}) // add indicators (requires plugin)
-	.addTo(controller);
-var mun2 = new TweenMax.to('#muneco', .5, {opacity:0});
-var scene_mun3 = new ScrollMagic.Scene({triggerElement:'#muneco', offset:4500, duration:200})
-	.setTween(mun2)
- 	.addTo(controller)
-	.addIndicators({name: "mun2"});
-
-//coche
-var scene_coche = new ScrollMagic.Scene({triggerElement: "#coche", offset:-50, duration: $(window).width() - 100,})
-	.setTween("#coche", 1, {scale: 1.5,})
-	.setPin("#coche") 
-	.addTo(controller)
-	.addIndicators({name: "coche"}) // add indicators (requires plugin)
-
-//saludo
-//var scene_saludo = new ScrollMagic.Scene({triggerElement: "#saludo", offset: 100, duration:1100})
-//	.setPin("#saludo") 
-//	.addTo(controller)
-//	.addIndicators({name: "saludo"})
-
-//plane
-//var scene_plane = new ScrollMagic.Scene({triggerElement: "#plane", offset:0, duration:8000})
-//	.setTween("#plane", 1, {scale: 50, x:800, y:-800})
-//	.setPin("#plane")
-//	.addTo(controller)
-//	.addIndicators({name: "plane"})
 
 
 
 
-//graph http://greensock.com/svg-tips
-//var scene_graph = new ScrollMagic.Scene({triggerElement: "#graph", duration: 800, tweenChanges: true})
-//	.setTween('.boxg', 1, {x:10, scaleX:4, rotation:0, opacity:1, fill:"#ff0000"})
-//	.setPin('#graph')
-//	.addIndicators({name: "g"}) // add indicators (requires plugin)
-//	.addTo(controller);	
-//graph title
-//var scene_graph_title = new ScrollMagic.Scene({triggerElement: "#propiedades", duration: 800, tweenChanges: true})
-//	.setTween('#propiedades', 1, {opacity:1})
-//	.setPin('#propiedades')
-//	.addTo(controller);	
+// //bezier
+// var tl = new TimelineMax({
+//   repeat: -1,
+//   yoyo: true
+// });
+// var bezier_path = [	{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 150 }, { x: 200, y: 150 },
+// 					{ x: 300, y: 200 }, { x: 300, y: 0 }, { x: 0, y: 0 }];
+
+// tl.staggerTo($('.bezier > svg'), 5, { bezier: {
+//   type: 'thru',
+//   values: bezier_path,
+//   curviness: 0.5
+// }, ease: Power1.easeInOut }, 0.0222);
+
+// //volando
+// var flightpath = {	
+// 		entry : {	curviness: 2, autoRotate: true, values: [
+// 											 {x: 0, y: 0 }, 
+// 											 { x: 100, y: 0 }, 
+// 											 { x: 100, y: 150 }, 
+// 											 { x: 200, y: 150 }]},
+// 		looping : {	curviness: 1.25, autoRotate: true,	values: [
+// 											{x: 510,	y: 60},
+// 											{x: 620,	y: -60},
+// 											{x: 500,	y: -100},
+// 											{x: 380,	y: 20},
+// 											{x: 500,	y: 60},
+// 											{x: 580,	y: 20},
+// 											{x: 620,	y: 15}]},
+// 		leave : {curviness: 1.25, autoRotate: true,	values: [
+// 											{x: 660,	y: 20},
+// 											{x: 800,	y: 130},
+// 											{x: $(window).width() + 300,	y: -100},]}};
 
 
-//caja de verde a naranja
-var scene3 = new ScrollMagic.Scene({triggerElement: "#trigger1"})
-	.setTween("#animate1", 0.1, {backgroundColor: "green", scale: 2.5}) // trigger a TweenMax.to tween
-	.addIndicators({name: "caja verde (duration: 0)"}) // add indicators (requires plugin)
-	.addTo(controller);
+// //var flightpath =[{ x: 200, y: 1000 }, { x: 100, y: 0 }, { x: 100, y: 150 }, { x: 200, y: 150 }];
+// var tween_flight = new TimelineMax()
+// 	.add(TweenMax.to($("#pajaro"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
+// 	//.add(TweenMax.to($("#pajaro"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
+// 	//.add(TweenMax.to($("#pajaro"), 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
+// var scene_pajaro = new ScrollMagic.Scene({triggerElement: "#target_pajaro", duration: 1000, offset: 100})
+// 	.setPin("#target_pajaro")
+// 	.setTween(tween_flight)
+// 	.addTo(controller);
 
-//caja azul se queda fija
-var scene4 = new ScrollMagic.Scene({triggerElement: "#trigger2", offset: 200,  duration: 300})
-	.setPin("#pin1")
-	.addIndicators({name: "caja azul (duration: 300)"}) // add indicators (requires plugin)
-	.addTo(controller);
 
-//parallax texto
-var tween5 = new TimelineMax ()
-	.add([
-	TweenMax.fromTo("#parallaxText .layer1", 1, {scale: 3, autoAlpha: 0.05, left: 300}, {left: -350, ease: Linear.easeNone}),
-	TweenMax.fromTo("#parallaxText .layer2", 1, {scale: 2, autoAlpha: 0.3, left: 150}, {left: -175, ease: Linear.easeNone})
-		]);
-var scene5 = new ScrollMagic.Scene({triggerElement: "#trigger2", offset:1500, duration: $(window).width()})
-	.setTween(tween5)
-	.addIndicators({name: "parallax texto"}) // add indicators (requires plugin)
-	.addTo(controller);
+// //casa, solo escena, set pin es lo más importante
+// var scene_casa = new ScrollMagic.Scene({triggerElement:'#casa',	offset: -50,duration: 3500})
+// 	.setPin('#casa')
+//  	.addTo(controller)
+// 	.addIndicators({name: "casa"});
+
+// //pop
+// var pop1 = new TweenMax.to('#pop1', .5, {opacity:1});
+// var scene_pop = new ScrollMagic.Scene({triggerElement:'#pop1', offset:0, duration:20,})
+// 	.setTween(pop1)
+//  	.addTo(controller)
+// 	.addIndicators({name: "pop"});
+// var scene_pop2 = new ScrollMagic.Scene({triggerElement: "#pop1", offset: 100,  duration: 1500})
+// 	.setPin("#pop1")
+// 	.addIndicators({name: "pop fijo"}) // add indicators (requires plugin)
+// 	.addTo(controller);
+// var pop1b = new TweenMax.to('#pop1', .5, {opacity:0});
+// var scene_pop3 = new ScrollMagic.Scene({triggerElement:'#pop1', offset:1600, duration:200,})
+// 	.setTween(pop1b)
+//  	.addTo(controller)
+// 	.addIndicators({name: "popb"});
+
+// // Create tween muñeco
+// var mun = new TweenMax.fromTo('#muneco', .5, 
+// 	{scale: .05, rotation: -10, top: 0},
+//    	{scale: 1, rotation: 0, top: 50});
+// var scene_mun = new ScrollMagic.Scene({triggerElement:'#muneco', offset:0, duration:300,})
+// 	.setTween(mun)
+//  	.addTo(controller)
+// 	.addIndicators({name: "mun"});
+// var scene_num2 = new ScrollMagic.Scene({triggerElement: "#muneco", offset: 300,  duration: 4200})
+// 	.setPin("#muneco")
+// 	.addIndicators({name: "mun fijo"}) // add indicators (requires plugin)
+// 	.addTo(controller);
+// var mun2 = new TweenMax.to('#muneco', .5, {opacity:0});
+// var scene_mun3 = new ScrollMagic.Scene({triggerElement:'#muneco', offset:4500, duration:200})
+// 	.setTween(mun2)
+//  	.addTo(controller)
+// 	.addIndicators({name: "mun2"});
+
+// //coche
+// var scene_coche = new ScrollMagic.Scene({triggerElement: "#coche", offset:-50, duration: $(window).width() - 100,})
+// 	.setTween("#coche", 1, {scale: 1.5,})
+// 	.setPin("#coche") 
+// 	.addTo(controller)
+// 	.addIndicators({name: "coche"}) // add indicators (requires plugin)
+
+// //saludo
+// //var scene_saludo = new ScrollMagic.Scene({triggerElement: "#saludo", offset: 100, duration:1100})
+// //	.setPin("#saludo") 
+// //	.addTo(controller)
+// //	.addIndicators({name: "saludo"})
+
+// //plane
+// //var scene_plane = new ScrollMagic.Scene({triggerElement: "#plane", offset:0, duration:8000})
+// //	.setTween("#plane", 1, {scale: 50, x:800, y:-800})
+// //	.setPin("#plane")
+// //	.addTo(controller)
+// //	.addIndicators({name: "plane"})
+
+
+
+
+// //graph http://greensock.com/svg-tips
+// //var scene_graph = new ScrollMagic.Scene({triggerElement: "#graph", duration: 800, tweenChanges: true})
+// //	.setTween('.boxg', 1, {x:10, scaleX:4, rotation:0, opacity:1, fill:"#ff0000"})
+// //	.setPin('#graph')
+// //	.addIndicators({name: "g"}) // add indicators (requires plugin)
+// //	.addTo(controller);	
+// //graph title
+// //var scene_graph_title = new ScrollMagic.Scene({triggerElement: "#propiedades", duration: 800, tweenChanges: true})
+// //	.setTween('#propiedades', 1, {opacity:1})
+// //	.setPin('#propiedades')
+// //	.addTo(controller);	
+
+
+// //caja de verde a naranja
+// var scene3 = new ScrollMagic.Scene({triggerElement: "#trigger1"})
+// 	.setTween("#animate1", 0.1, {backgroundColor: "green", scale: 2.5}) // trigger a TweenMax.to tween
+// 	.addIndicators({name: "caja verde (duration: 0)"}) // add indicators (requires plugin)
+// 	.addTo(controller);
+
+// //caja azul se queda fija
+// var scene4 = new ScrollMagic.Scene({triggerElement: "#trigger2", offset: 200,  duration: 300})
+// 	.setPin("#pin1")
+// 	.addIndicators({name: "caja azul (duration: 300)"}) // add indicators (requires plugin)
+// 	.addTo(controller);
+
+// //parallax texto
+// var tween5 = new TimelineMax ()
+// 	.add([
+// 	TweenMax.fromTo("#parallaxText .layer1", 1, {scale: 3, autoAlpha: 0.05, left: 300}, {left: -350, ease: Linear.easeNone}),
+// 	TweenMax.fromTo("#parallaxText .layer2", 1, {scale: 2, autoAlpha: 0.3, left: 150}, {left: -175, ease: Linear.easeNone})
+// 		]);
+// var scene5 = new ScrollMagic.Scene({triggerElement: "#trigger2", offset:1500, duration: $(window).width()})
+// 	.setTween(tween5)
+// 	.addIndicators({name: "parallax texto"}) // add indicators (requires plugin)
+// 	.addTo(controller);
 
 //add scenes here
 
 
 
 //use keys to jump to anchors
-$(document).keypress(function(e) {
-    switch(e.keyCode) { //39 right, 37 left
-        case 38: //scroll up
-        	$(document).scrollLeft($("#coche").offset().left );
-        break;
-        case 40: //scroll down
-            //right arrow pressed
-        break;
-    }
-});
+// $(document).keypress(function(e) {
+//     switch(e.keyCode) { //39 right, 37 left
+//         case 38: //scroll up
+//         	$(document).scrollLeft($("#coche").offset().left );
+//         break;
+//         case 40: //scroll down
+//             //right arrow pressed
+//         break;
+//     }
+// });
 
 //move to next - previous section see: http://jsfiddle.net/yn6maby0/25/
+
+window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 38, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
 
 
 //mouse wheel scrolls horizontal
