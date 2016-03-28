@@ -331,22 +331,33 @@
 	top: 5%;
 	left: 4200px;
 	opacity: 0;
+	z-index: 12;
 }
 
 #pan{
 	position: absolute;
-	left:4300px;
-	top: 5%;
-	z-index: 21;
-	animation: pan 3s ease infinite;
+	left:4900px;
+	top: 40%;
+	z-index: 15;
+	/*animation: pan 3s ease infinite;*/
 }
 @keyframes pan {
     0% { left: 4800px; }
     50% { left: 4900px; }
     100% { left: 4800px; }
-
 }
-
+#spino{
+	position: absolute;
+	left:4900px;
+	top: 5%;
+	z-index: 21;
+	animation: spino 2s ease infinite;
+}
+@keyframes spino {
+    0% { transform: rotate(0);}
+    50% { transform: rotate(-90deg); }
+    100% { transform: rotate(0); }
+}
 #piechart_3d{
 	position: absolute;
 	left: 5100px;
@@ -362,7 +373,11 @@
 	left: 5800px;
 	opacity: 0;
 }
-
+#mold{
+	position: absolute;
+	left: 6000px;
+	bottom: -200px;
+}
 #barn2{
 	position: absolute;
 	left:6300px;
@@ -570,7 +585,7 @@
 	position: absolute;
 	top: 35%;
 	left: 13600px;
-	opacity: 0.1;
+	opacity: 0;
 	width: 130px;
 }
 #queso_serpiente{

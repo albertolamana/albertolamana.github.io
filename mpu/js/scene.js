@@ -147,6 +147,12 @@ var scene_txt07 = new ScrollMagic.Scene({triggerElement: "#txt07", offset: 200, 
 	.setPin("#txt07") 
 	.addTo(controller)
 
+//mold
+var scene_mold = new ScrollMagic.Scene({triggerElement: "#mold", offset: -200, duration: 300,})
+	.setTween("#mold", 1, {bottom: 100,})
+	//.setPin("#txt11") 
+	.addTo(controller)
+
 //trigger video cuando el scroll sea mayor de 300
 var video1 = 0
 function green() {
