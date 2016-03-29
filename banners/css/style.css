@@ -1,0 +1,103 @@
+#outer {
+    width: 100%;
+    text-align: center;
+}
+#inner {
+  display: inline-block;
+}
+.col1{
+	float: left;
+
+}
+.col2{
+	float: left;
+	background-color: #2da9d3;
+	height: 550px;
+	padding: 10px;
+}
+#quesopizza{
+	position: relative;
+	top:-160px;
+	opacity: 0.1;
+}
+#raya{
+	cursor:url('../img/rayador.png'), auto;
+}
+#pizzasin{
+	position: relative;
+	top:-70px;
+}
+#boxrayaduras{ 
+	position: relative;
+	top:-20px;
+    width: 200px; 
+    height: 400px; 
+    margin-left: 30px;
+    background-image: url("../img/rayaduras.png");
+    background-position: 0px 50px;
+    background-repeat: repeat-y;
+    opacity: 0;
+    z-index: 10;
+    animation: animatedBackground 2s linear infinite;
+}
+@keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+}
+
+#quesobike{
+	position: relative;
+	top:-375px;
+	left:40px;
+}
+.draggable { 
+	width: 150px; 
+	height: 150px; 
+	z-index: 10;
+}
+
+#bike{
+	position: relative;
+	top:-260px;
+	left:-400px;
+}
+#granjero{
+	position: relative;
+	left:0px;
+	top:0px;
+	z-index: 20;
+
+}
+#vacas{
+	display: none;
+	width: 250px;
+
+}
+#gotasleche{ 
+	display: none;
+	position: relative;
+	top:0px;
+	height: 420px;
+    margin-left: 30px;
+    background-image: url("../img/gotasleche.png");
+    background-position: 0px 50px;
+    background-repeat: repeat-y;
+    opacity: 1;
+    z-index: 10;
+    animation: leche 2s linear infinite;
+}
+@keyframes leche {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+}
+#botella{
+	display: none;
+	position: relative;
+	top:-100px;
+}
+.col3{
+	float: left;
+	background-color: #2da9d3;
+	height: 531px;
+	padding: 10px;
+}
