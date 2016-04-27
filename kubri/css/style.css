@@ -17,8 +17,34 @@
 	border: red solid 1px;
 	transform: rotate(0deg);
 }
+.header{
+  position: absolute;
+  top: 0vh;
+  width:100vw;  
+  height: 10vw;
+  background-color: gray;
+  z-index: 100;
+  padding: 10px;
+  font-size: 20px;
+  color:white;
+  opacity: .7;
+}
+.maintit{
+  position: absolute;
+  left: 10%;
+  top:10%; 
+  font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+  font-size: 100px;
+  font-stretch: condensed;
+}
+.logo{
+  position: absolute;
+  right: 10%;
+  top:10%;
+}
 
-.rotate-90 { 
+
+/*.rotate-90 { 
 	width: 100px;
   	animation: aspa 5s linear 1;	
     transform-origin: 50% 50%;	
@@ -29,7 +55,7 @@
   100% {
     transform: rotate(360deg);
   }
-}
+}*/
 .sc1a{
 	position: absolute;
 	background-image: url('../img/back1.jpg');
@@ -118,17 +144,7 @@ body {
 
 
 
-.header{
-  position: absolute;
-  top: 0vh;
-  width:100vw;  
-  background-color: gray;
-  z-index: 100;
-  padding: 10px;
-  font-size: 20px;
-  color:white;
-  opacity: .7;
-}
+
 
 .fullh{
     height:100vh;
@@ -172,7 +188,7 @@ body {
     width:100vw;
     height: 450px;
     background-color: white;  
-    opacity: .8;
+    background-color: rgba(255,255,255,0.8);
 }
 
 .pie{
@@ -247,7 +263,6 @@ https://matthewlein.com/ceaser/
   border: black solid 3px;
   box-shadow: 5px 5px 5px #888;
   z-index: 10;
-
 }
 .testimonio{
   display:block;
