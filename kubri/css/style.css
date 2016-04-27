@@ -1,0 +1,303 @@
+/*================================================================*/
+/*================   Estilos fijos         =======================*/
+/*================================================================*/
+#coordinates{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+  z-index: 500;
+  background-color: gray;
+  /*display: none;*/
+}
+
+#test2{
+	position: relative;
+	left:50px;
+	width: 100px;
+	border: red solid 1px;
+	transform: rotate(0deg);
+}
+
+.rotate-90 { 
+	width: 100px;
+  	animation: aspa 5s linear 1;	
+    transform-origin: 50% 50%;	
+}@keyframes aspa {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.sc1a{
+	position: absolute;
+	background-image: url('../img/back1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+}
+.caja1{
+	background-color: green;
+	position: relative;
+	top: 200px;
+	left: 50px;
+	width: 500px;
+	height: 500px;
+
+}
+.sc1b{
+	position: fixed;
+	left: 50%;
+	background-image: url('../img/back2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+}
+.sc2a{
+	background-color: blue solid 5px;
+	width: 500px;
+}
+
+body {
+    margin:0;     /* This is used to reset any browser-default margins */
+    height:100vh; /* This is needed to overcome a Chrome bug. */
+    width:100vw;  /* As above. */
+    overflow-x: hidden;
+}
+
+.panel {
+    height:100vh;
+    width:50vw;
+}
+
+#left1 {
+	position: fixed;
+    background:#5ae;
+    float:left;
+   	background-image: url('../img/back1.jpg');
+   	z-index: -10;
+}
+
+#right1 {
+    background:#ea5;
+    float:right;
+   	background-image: url('../img/back2.jpg');
+}
+#left2 {
+	position: relative;
+	top: 100vh;
+    /*background:red;*/
+    float:left;
+   	background-image: url('../img/back3x.jpg');    
+}
+
+#right2 {
+    background:green;
+    float:right;
+   	background-image: url('../img/back4.jpg');
+}
+#left3 {
+	position: relative;
+	top: 100vh;
+    background:yellow;
+    float:left;
+   	background-image: url('../img/back3x.jpg');    
+}
+
+#right3 {
+    background:gray;
+    float:right;
+   	background-image: url('../img/back4.jpg');
+}
+
+
+
+
+.header{
+  position: absolute;
+  top: 0vh;
+  width:100vw;  
+  background-color: gray;
+  z-index: 100;
+  padding: 10px;
+  font-size: 20px;
+  color:white;
+  opacity: .7;
+}
+
+.fullh{
+    height:100vh;
+    width:100vw;
+
+}
+.fijo{
+  position: fixed;
+    height:100vh;
+    width:100vw;
+
+}
+.level{
+    position: relative;
+    height:100vh;
+    width:100vw;
+    /*filter: grayscale(100%);*/
+
+}
+
+.text1{
+  position: absolute;
+  background-color: green;
+  font-size: 48px;
+  color: white;
+  padding:15px;
+  border-radius: 10px;
+  border:black solid 1px;
+  opacity: .8;
+  z-index: 100;
+}
+#caja1{
+  top: 250vh;
+  left: -300px;
+  z-index: 100;
+
+}
+
+.clean_area{
+    position: relative;
+    width:100vw;
+    height: 450px;
+    background-color: white;  
+    opacity: .8;
+}
+
+.pie{
+  position: absolute;
+  top: 640vh;
+  width:100vw;  
+  background-color: gray;
+  z-index: 100;
+  padding: 10px;
+  font-size: 20px;
+  color:white;
+  opacity: .7;
+}
+.fotocamino{
+     /*filter: grayscale(1);*/
+     filter: grayscale(100%);
+     -moz-filter: grayscale(100%);
+     -webkit-filter:grayscale(100%);
+}
+.gocolor{
+  filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -webkit-filter:grayscale(0%);  
+  transition-property: filter;
+  transition-duration: 5s;  
+  -webkit-transition: -webkit-filter 5s linear;
+}
+
+#caja2{
+  top: 350vh;
+  left: 100px;
+  z-index: 100;
+
+}
+#caja3{
+  top: 300px;
+  left: 100px;
+  z-index: 100;
+
+}
+
+#cajaroja {
+    position: absolute;
+    top:180vh;
+    height: 150px;
+    width: 150px;
+    margin: 50px;
+    padding: 10px;
+    border: 1px solid black;
+    -webkit-perspective: 150px; /* Chrome, Safari, Opera  */
+    perspective: 150px;
+}
+
+#tv {
+    padding: 50px;
+    position: absolute;
+    border: 1px solid black;
+    background-color: red;
+    -webkit-transform: rotateX(10deg); /* Chrome, Safari, Opera  */
+    transform: rotateY(10deg);
+}
+
+/*
+CSS Easing Animation Tool
+https://matthewlein.com/ceaser/
+*/
+.testimonio_pos{
+  position: absolute;
+  top:20px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: black solid 3px;
+  box-shadow: 5px 5px 5px #888;
+  z-index: 10;
+
+}
+.testimonio{
+  display:block;
+  filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -webkit-filter:grayscale(100%);  
+  -webkit-border-radius: 50%;
+}
+
+.testimonio_pos img{
+  filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -webkit-filter:grayscale(100%);  
+  transition-property: filter;
+  transition-duration: .5s;  
+  -webkit-transition: -webkit-filter 5s linear;  
+   transform: scale(1,1) rotate(0deg) ;
+  transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+}
+
+.testimonio_pos:hover img{
+  filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -webkit-filter:grayscale(0%);  
+  transition-property: filter;
+  transition-duration: .5s;  
+  -webkit-transition: -webkit-filter 5s linear;  
+   transform: scale(1.2,1.2) rotate(7deg) ;
+  transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+}
+.tp1{
+  left:10%;
+}
+.tp2{
+  left:40%;
+}
+
+.tp3{
+  left:70%;
+}
+
+.tes_text{
+  position: absolute;
+  top:270px;
+  left: 10%;
+  width: 80%;
+  font-size: 30px;
+  font-family: 'Calligraffitti', cursive;
+  text-align: right;
+  opacity: 0;
+}
