@@ -57,8 +57,10 @@ function mueve() {
 $(window).scroll(function(){
 
 	var yOffset = window.pageYOffset;
-	var speed = 1.4;
-	$('#caja3').css({"top":300 + (yOffset / speed) + "px"});
+	//parallax
+	$('#caja3').css({"top": 300 + (yOffset / 1.4) + "px"});
+	$('#logo').css({"top": 50 +  (yOffset / 1.7) + "px"});
+
 
 	var myalt = $(window).scrollTop()/$(window).height()*100;
 	if (myalt>320 && myalt<400){ //no permitas que se inicie cada vez que se mueva el cursor
