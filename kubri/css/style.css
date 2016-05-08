@@ -206,17 +206,6 @@ body {
     background-color: rgba(255,255,255,0.8);
 }
 
-.pie{
-  position: absolute;
-  top: 600vh;
-  width:100vw;  
-  background-color: gray;
-  z-index: 100;
-  padding: 10px;
-  font-size: 20px;
-  color:white;
-  opacity: .7;
-}
 .fotocamino{
      /*filter: grayscale(1);*/
      filter: grayscale(100%);
@@ -399,12 +388,29 @@ https://matthewlein.com/ceaser/
   right: -300px;
   z-index: 200;
 }
+.pie{
+  position: absolute;
+  top: 600vh;
+  width:100vw;  
+  height: 40px;
+  background-color: rgba(224,142,30, 1);
+  z-index: 100;
+  padding: 10px;
+  font-size: 20px;
+  color:white;
+  opacity: .7;
+}
 .botonpie{
   display: inline-block;
   background-color: rgba(224,142,30, 1);
   color:rgb(75,45,20);
   padding: 10px;
   margin-right: 50px;
+}
+.social{
+  position: relative;
+  top:-40px;
+  left:80vw;
 }
 .botonpie_img{
   display: inline-block;
