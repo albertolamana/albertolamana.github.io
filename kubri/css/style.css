@@ -7,7 +7,7 @@
 	left: 0px;
   z-index: 500;
   background-color: gray;
-  /*display: none;*/
+  display: none;
 }
 
 #test2{
@@ -71,7 +71,6 @@
 	left: 50px;
 	width: 500px;
 	height: 500px;
-
 }
 .sc1b{
 	position: fixed;
@@ -159,7 +158,7 @@ body {
 }
 .fullh2{
   position: relative;
-  height:70vh;
+  height:75vh;
   width:100vw;  
 
 }
@@ -167,13 +166,13 @@ body {
   position: relative;
   top:0vh;
   left: 50vw;
-  height: 60vh;
+  height: 65vh;
   width: 45vw;
-  background-color: rgba(224,142,30,0.8);
+  background-color: rgba(224,142,30,0.9);
   font-size: 48px;
   color:#4B2D14;;
   padding:5vh;
-  border-radius: 10px;
+  border-radius: 0px;
   z-index: 100;
 
 }
@@ -193,7 +192,7 @@ body {
   z-index: 100;
 }
 #caja1{
-  top: 250vh;
+  top: 220vh;
   left: -300px;
   z-index: 100;
 
@@ -207,17 +206,6 @@ body {
     background-color: rgba(255,255,255,0.8);
 }
 
-.pie{
-  position: absolute;
-  top: 600vh;
-  width:100vw;  
-  background-color: gray;
-  z-index: 100;
-  padding: 10px;
-  font-size: 20px;
-  color:white;
-  opacity: .7;
-}
 .fotocamino{
      /*filter: grayscale(1);*/
      filter: grayscale(100%);
@@ -243,6 +231,7 @@ body {
   top: 300px;
   left: 100px;
   z-index: 100;
+  display: none;
 
 }
 
@@ -331,4 +320,100 @@ https://matthewlein.com/ceaser/
   font-family: 'Calligraffitti', cursive;
   text-align: right;
   opacity: 0;
+}
+.text3{
+  position: absolute;
+  top: 300px;
+  left: 50px;
+  width: 50vw;
+  z-index: 100;
+  background-color: rgba(224,142,30,.7);
+  padding: 15px;
+  color:rgb(75,45,20);
+  font-size: 48px;
+}
+.textbox{
+  position: absolute;
+  left: -700px;
+  z-index: 100;
+  background-color: rgba(224,142,30,.8);
+  padding: 15px;
+  color:rgb(75,45,20);
+  font-size: 38px;
+}
+#caja6{
+  top:180vh;
+}
+#caja4{
+  top: 200vh;
+}
+#caja5{
+  top: 220vh;
+}
+#caja7{
+  top: 240vh;
+}
+.ptwoboys{
+    position: relative;
+    height:70vh;
+    width:100vw;
+    /*filter: grayscale(100%);*/
+}
+.textbox_b{
+  position: absolute;
+  right: 0px;
+  z-index: 100;
+  background-color: rgba(224,142,30,.8);
+  padding: 15px;
+  color:rgb(75,45,20);
+  font-size: 38px;
+  text-align: right;
+}
+#caja8{
+  top: 320vh;
+}
+.form{
+  position: absolute;
+  top:450vh;
+  right:100px;
+  z-index: 200;
+  background-color: rgba(224,142,30,.8);
+  padding: 15px;
+  color:rgb(75,45,20);
+  font-size: 38px;  
+}
+#rodando{
+  position: absolute;
+  top:520vh;
+  right: -300px;
+  z-index: 200;
+}
+.pie{
+  position: absolute;
+  top: 600vh;
+  width:100vw;  
+  height: 40px;
+  background-color: rgba(224,142,30, 1);
+  z-index: 100;
+  padding: 10px;
+  font-size: 20px;
+  color:white;
+  opacity: .7;
+}
+.botonpie{
+  display: inline-block;
+  background-color: rgba(224,142,30, 1);
+  color:rgb(75,45,20);
+  padding: 10px;
+  margin-right: 50px;
+}
+.social{
+  position: relative;
+  top:-40px;
+  left:80vw;
+}
+.botonpie_img{
+  display: inline-block;
+  margin-right: 20px;
+
 }
