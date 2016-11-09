@@ -1,0 +1,48 @@
+/* Empty. Add your own CSS if you like */
+.tit_1{
+	background-color: #444444
+}
+.tit_1 h1{
+	color:white; 
+	text-align: center;
+}
+.tit_2{
+	background-color: #444444;
+	text-align: center; 
+	font-weight: bold;
+}
+.tit_3{
+	background-color: #ffc900;
+
+	font-weight: bold;
+}
+
+p{
+	line-height: 1.4;
+}
+.italic{
+	font-style: italic;
+}
+.font-size-14 p{
+    font-size: 14px;
+}
+.font-size-15 p{
+    font-size: 15px;
+}
+.font-size-16 p{
+    font-size: 16px;
+}
+.font-size-17 p{
+    font-size: 17px;
+}
+.font-size-18 p{
+    font-size: 18px;
+}
+.mylistcard{
+	background-color: #777;
+	color:white;
+	margin-bottom: 10px;
+}
+.intro{
+	font-style: italic;
+}
