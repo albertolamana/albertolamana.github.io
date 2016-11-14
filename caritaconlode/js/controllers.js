@@ -7,13 +7,15 @@ angular.module('starter.controllers', [])
   $scope.show1 = false;
   $scope.show2 = false;
   $scope.show3 = false;
-  $scope.show4 = false;    
+  $scope.show4 = false;   
+  $scope.show5 = false; 
   $scope.click1 = function($event) { 
     $event.stopPropagation();
     $scope.show1 = !$scope.show1;
     $scope.show2 = false;
     $scope.show3 = false;
     $scope.show2 = false;
+    $scope.show5 = false;
   }
   $scope.click2 = function($event) {
     $event.stopPropagation();
@@ -21,6 +23,7 @@ angular.module('starter.controllers', [])
     $scope.show1 = false;
     $scope.show3 = false;
     $scope.show4 = false;
+    $scope.show5 = false;
   }
   $scope.click3 = function($event) {
     $event.stopPropagation();
@@ -28,6 +31,7 @@ angular.module('starter.controllers', [])
     $scope.show1 = false;
     $scope.show2 = false;
     $scope.show4 = false;  
+    $scope.show5 = false;
   }
   $scope.click4 = function($event) {
     $event.stopPropagation();
@@ -35,12 +39,22 @@ angular.module('starter.controllers', [])
     $scope.show1 = false;
     $scope.show2 = false;  
     $scope.show3 = false; 
-  }  
+    $scope.show5 = false;
+  } 
+  $scope.click5 = function($event) {
+    $event.stopPropagation();
+    $scope.show5 = !$scope.show4;
+    $scope.show1 = false;
+    $scope.show2 = false;  
+    $scope.show3 = false; 
+    $scope.show4 = false;
+  }    
   $scope.hideAll = function() { 
     $scope.show1 = false;
     $scope.show2 = false;
     $scope.show3 = false;
     $scope.show4 = false;
+    $scope.show5 = false;
   }
 
   // With the new view caching in Ionic, Controllers are only called
