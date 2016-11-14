@@ -43,7 +43,7 @@ angular.module('starter.controllers', [])
   } 
   $scope.click5 = function($event) {
     $event.stopPropagation();
-    $scope.show5 = !$scope.show4;
+    $scope.show5 = !$scope.show5;
     $scope.show1 = false;
     $scope.show2 = false;  
     $scope.show3 = false; 
